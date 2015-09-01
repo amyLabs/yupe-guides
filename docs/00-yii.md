@@ -16,6 +16,6 @@
 
 Если вы собираетесь писать свои модули и дополнения для "Юпи!":
 
-* [Моудли в Yii](http://yiiframework.ru/doc/guide/ru/basics.module)
+* [Модули в Yii](http://yiiframework.ru/doc/guide/ru/basics.module)
 * [Темы оформления и скины](http://yiiframework.ru/doc/guide/ru/topics.theming)
-* [Улучшение производительнсоти](http://yiiframework.ru/doc/guide/ru/topics.performance)
+* [Улучшение производительности](http://yiiframework.ru/doc/guide/ru/topics.performance)
