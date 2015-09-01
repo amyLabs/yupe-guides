@@ -3,7 +3,7 @@ theme: readthedocs
 theme_dir: themes/readthedocs
 pages:
 - 'Введение': 'index.md'
-- 'Установка': '01-install.md'
-- 'Обновление': '02-update.md'
-- 'Обзор модулей': '03-modules.md'
-- 'Настройки сайта': '04-settings.md'
+- 'Установка': 'install.md'
+- 'Обновление': 'update.md'
+- 'Обзор модулей': 'modules.md'
+- 'Настройки сайта': 'settings.md'
