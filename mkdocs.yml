@@ -2,7 +2,7 @@ site_name: Yupe CMS
 theme: readthedocs
 theme_dir: themes/readthedocs
 pages:
-- 'Введение': '00-yii.md'
+- 'Введение': 'index.md'
 - 'Установка': '01-install.md'
 - 'Обновление': '02-update.md'
 - 'Обзор модулей': '03-modules.md'

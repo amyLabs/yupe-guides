@@ -1,19 +1,21 @@
-# Добро пожаловать
-Yupe - Open Source CMS на Yiiframework.
-## Для кого 
- * разработчикам/студиям для более быстрого понимания работы платформы
- * тем, кто хочет помочь с разработкой
- * конечным пользователям, работающим с платформой
+# Знакомство с Yiiframework 1.x
 
-## Полезнае ссылки
-* [API](http://api.yupe.ru/)
-* [Официальный сайт](http://yupe-project.ru)
-* [Сообщество разработчиков](http://yupe.ru)
-* [Чат](http://gitter.im/yupe/yupe)
-* [Блог](http://yupe.ru/blogs/yupe-mini-cms-yii)
-* [Форум поддержки](http://yupe.ru/talk)
-* [Twitter](https://twitter.com/#!/YupeCms)
-* [Группа Вконтакте](https://vk.com/yupecms)
+В основе CMS Yupe! лежит фреймворк Yiiframework версии 1.x, поэтому для понимания работы, принципов модификации системы и написания собственных модулей, необходимо в первую очередь поближе познакомиться с этим фреймворком.
 
-## Коммерческая поддержка
-Мы и [наши партнеры](http://yupe-project.ru/partners) занимаемся [разработкой](http://yupe-project.ru/service/development) и [поддержкой](http://yupe-project.ru/service/support) проектов на Yupe.
+Мы рекомендуем ознакомиться со следующими разделами:
+
+Для новичков в Yii:
+
+* [Модель-Представление-Контроллер (MVC)](http://yiiframework.ru/doc/guide/ru/basics.mvc)
+* [Лучшие практики MVC](http://yiiframework.ru/doc/guide/ru/basics.best-practices)
+* [Что такое Yii](http://yiiframework.ru/doc/guide/ru/quickstart.what-is-yii)
+* [Установка](http://yiiframework.ru/doc/guide/ru/quickstart.installation)
+* [Создание первого приложения](http://yiiframework.ru/doc/guide/ru/quickstart.first-app)
+
+После этого ОБЯЗАТЛЬНО прочитайте разделы, описывающие работу с базой данных и работу с формами.
+
+Если вы собираетесь писать свои модули и дополнения для "Юпи!":
+
+* [Модули в Yii](http://yiiframework.ru/doc/guide/ru/basics.module)
+* [Темы оформления и скины](http://yiiframework.ru/doc/guide/ru/topics.theming)
+* [Улучшение производительности](http://yiiframework.ru/doc/guide/ru/topics.performance)
