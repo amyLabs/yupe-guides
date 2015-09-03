@@ -7,3 +7,4 @@ pages:
 - 'Обновление': 'update.md'
 - 'Обзор модулей': 'modules.md'
 - 'Настройки сайта': 'settings.md'
+- 'Создание модуля': 'module-create.md'
