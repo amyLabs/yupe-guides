@@ -273,7 +273,92 @@ class TodoBackendController extends BackController
 Если все сделано правильно, то на этот момент при клике на пункте меню `Контент - ToDo` в панели управления, не должно появляться ошибки, как это было ранее. Вы должны увидеть главное меню панели управления, блок с информацией о модуле и пустую контентную область.
 
 #### Отображение списка задач и фильтрация
+Отвечать за отображение списка задач будет виджет [CustomGridView](https://github.com/yupe/yupe/blob/master/protected/modules/yupe/widgets/CustomGridView.php), которому нужен источник данных. Для этого будет использоваться [CActiveDataProvider](http://www.yiiframework.com/doc/api/1.1/CActiveDataProvider).
 
+Теперь в модели (файл `models/Todo.php`) необходимо создать метод `search`, который и будет служить источником данных для отображения и фильтрации задач.
+
+```php
+public function search()
+{
+    $criteria = new CDbCriteria;
+
+    $criteria->compare('description', $this->description, true);
+    $criteria->compare('status', $this->status);
+
+    return new CActiveDataProvider(get_class($this), [
+        'criteria' => $criteria,
+        'sort' => [
+            'defaultOrder' => 'sort'
+        ]
+    ]);
+}
+```
+
+Приведенный выше код не должен вызывать трудностей. Стоит только уделить немного внимания этим двум строкам:
+
+```php
+$criteria->compare('description', $this->description, true);
+$criteria->compare('status', $this->status);
+```
+
+Здесь описываются условия для фильтрации данных, из которых можно понять, что поиск будет осуществляться только по двум полям: `description` и `status`. При этом для поля `description` третьим параметром передается `true`, что сообщает системе о возможности частичного совпадения фразы.
+
+Для правильной работы поиска, в правилах валидации (метод `rules`), необходимо объявить эти поля безопасными для сценария `search`:
+
+```php
+['description, sort', 'safe', 'on' => 'search']
+```
+
+Теперь нужно изменить контроллер:
+
+```php
+public function actionIndex()
+{
+    // В модели включаем сценарий search
+    $model = new Todo('search');
+
+    // Получаем данные из запроса. 
+    // Если в фильтре ничего не меняли, то в переменной будет null
+    $query = Yii::app()->getRequest()->getQuery('Todo');
+
+    $model->unsetAttributes();
+
+    if ($query) {
+        // Присваиваем атрибутам модели значения из запроса
+        $model->setAttributes($query);
+    }
+    
+    // Передаем модель в представление
+    $this->render('index', ['model' => $model]);
+}
+```
+
+А в представлении добавить виджет:
+
+```php
+$this->widget('yupe\widgets\CustomGridView', [
+        'id' => 'todo-grid',
+        'type' => 'condensed',
+        'dataProvider' => $model->search(),
+        'filter' => $model,
+        'columns' => [
+            'id',
+            'description',
+            'status',
+            [
+                'class' => 'yupe\widgets\CustomButtonColumn',
+                'template' => '{update} {delete}'
+            ],
+        ],
+    ]
+);
+```
+
+Теперь, в панели управления, вы должны увидеть следующую картину:
+
+![Модуль ToDo - Список](img/yupe-module-3.png)
+
+Обращаем ваше внимание на то, что не весь код размещается в этом описании, а только самые важные его части. Более подробно изучить код этой части можно на [GitHub](https://github.com/sabian/yupe-todo/commit/f4d2019ff395c625857935a615bb2d2c1815926d).
 
 -----------
 **План работы** (это для себя и не войдет в доки):
