@@ -577,11 +577,13 @@ public static function getLabel($id)
 ```
 
 После чего нужно обновить конфигурацию модуля. Это можно сделать в панели управления, кликнув на специальный значек, который появится на кнопке модуля:
+
 ![Модуль ToDo. Обновление конфигурации](img/yupe-module-4.png)
 
 или выполнив консольную команду: `php protected/yiic yupe updateConfig`
 
 Подготовительные работы закончены, теперь пора отобразить название статусов в списке задач. Для этого в файле `views/todoBackend/index.php` вместо значения `status` массива `columns` ставим нижеследующий код:
+
 ```php
 [
     'name' => 'status',
@@ -592,9 +594,11 @@ public static function getLabel($id)
 ```
 
 Теперь, вместо непонятной цифры, у вас должно отображаться название статуса
+
 ![Модуль ToDo. Название статуса](img/yupe-module-5.png)
 
 Для удобства фильтрации задач по статусу, сделаем выпадающий список
+
 ```php
 'filter' => CHtml::activeDropDownList($model, 'status', TodoStatusHelper::getList(), [
     'encode' => false, 
@@ -608,6 +612,7 @@ public static function getLabel($id)
 Согласитесь, стало гораздо удобней!
 
 Далее реализуем возможность смены статуса задачи через форму редактирования. Для этого изменим файл `views/todoBackend/_form.php`, где вместо кода
+
 ```php
 <div class="row">
     <div class="col-sm-12">
@@ -617,6 +622,7 @@ public static function getLabel($id)
 ```
 
 поставим следующий
+
 ```php
 <div class="row">
     <div class="col-sm-8">
@@ -660,6 +666,7 @@ public function actions()
 Значение ключа `model` содержит название модели которая будет отвечать за обработку данных, а в `validAttributes` хранятся названия полей доступных для редактирования.
 
 Осталось заменить код колонки `status` в файле `views/todoBackend/index.php` на следующий:
+
 ```php
 [
     'name' => 'status',
@@ -675,9 +682,11 @@ public function actions()
 ```
 
 А теперь можно насладиться результатом:
+
 ![Модуль ToDo. Inline-редактирование](img/yupe-module-7.gif)
 
 Напоследок предлагаем сделать цветовое кодирование статусов, чтобы их было проще различать. Для этого в класс хелпера добавляем новый метод:
+
 ```php
 public static function getStylesList()
 {
