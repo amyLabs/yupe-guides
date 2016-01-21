@@ -1,9 +1,33 @@
-site_name: Yupe CMS
+site_name: Юпи!
+site_url: http://docs1.yupe.ru
+repo_url: https://github.com/amyLabs/yupe-guides
+site_description: Документация по платформе Юпи!
+site_author: amylabs team
+google_analytics: ['UA-61725465-4', 'docs1.yupe.ru']
 theme: readthedocs
 theme_dir: themes/readthedocs
 pages:
-- 'Введение': 'index.md'
+- 'О проекте':
+    - 'Возможности': 'index.md'
+    - 'Команда': 'team.md'
+- 'Введение': 'intro.md'
 - 'Установка': 'install.md'
 - 'Обновление': 'update.md'
 - 'Обзор модулей': 'modules.md'
 - 'Настройки сайта': 'settings.md'
+- 'Помощь проекту': 'assistance.project.md'
+- 'Компоненты':
+    - 'Мигратор': 'migrator.index.md'
+    - 'Управление конфигами': 'config.manager.md'
+    - 'Генерация Atom-ленты': 'atomfeed.md'
+    - 'Проблемы CWebUser и модуля Gii': 'cwebuser.issues.md'
+    - 'Работа с событиями': 'events.md'
+    - 'Модуль поиска на основе Zend Lucene': 'zend.search.md'
+- 'Настройки':
+    - 'Оптимальные настройки APC': 'apc.options.md'
+    - 'Работа с eclipse' : 'editors.eclipse.md'
+    - 'Конфигурация Memcahed': 'memcached.md'
+    - 'Установка на Linux': 'ubuntu.md'
+    - 'Конфигурация модулей с настройками пользователей': 'userspace.config.md'
+- 'Тестирование': 'testing.md'
+
