@@ -707,6 +707,50 @@ public static function getStylesList()
 Код этой части модуля доступен по [ссылке](https://github.com/sabian/yupe-todo/commit/3f4478ab1e79f704ec59f9316573a0fb8eed1745). Если у вас возникли вопросы, можете смело задавать их на нашем [форуме](http://yupe.ru/talk/).
 
 #### Сортировка перетаскиванием (drag&drop)
+В модуле нет необходимости делать сортировку, т.к. приоритеты задач определяются статусами, но поскольку он создается в учебных целях, то предлагаем реализовать эту возможность.
+
+В метод `actions` файла `TodoBackendController` добавляем определение действия `sortable`:
+
+```php
+'sortable' => [
+    'class' => 'yupe\components\actions\SortAction',
+    'model' => 'Todo',
+    'attribute' => 'sort'
+]
+```
+
+Поле `sort`, в котором будет храниться порядок сортировки записей, мы создали в разделе Миграции. Обратите внимание, что для корректной работы сортировки, значение по-умолчанию должно быть 1 (`NOT NULL DEFAULT 1`).
+
+В класс модели `Todo` добавляем метод `beforeSave` который задает порядок сортировки для новых записей:
+
+```php
+protected function beforeSave()
+{
+    if ($this->isNewRecord) {
+        $this->sort = Yii::app()->db->createCommand()
+            ->select('MAX(sort) + 1')
+            ->from($this->tableName())
+            ->queryScalar();
+    }
+
+    return parent::beforeSave();
+}
+```
+
+Следующие строки добавляем к параметрам виджета `CustomGridView` в файле `views/todoBackend/index.php`:
+
+```php
+'sortableRows' => true,
+'sortableAjaxSave' => true,
+'sortableAttribute' => 'sort',
+'sortableAction' => '/todo/todoBackend/sortable',
+```
+
+Это всё! [Вот так просто](https://github.com/sabian/yupe-todo/commit/ee46a97aaaee031bf8d27ffc76a2fd8214ddfcc1), вы можете реализовать drag&drop сортировку записей в вашем модуле для CMS Юпи!
+
+![Модуль ToDo. D&D сортировка](img/yupe-module-9.gif)
+
+#### Уведомление о невыполненных задачах в панели управления
 
 
 -----------
@@ -716,7 +760,7 @@ public static function getStylesList()
 - ~~создание модели и переводов~~
 - ~~CRUD~~
 - ~~инлайн редактирование статусов~~
-- D&D сортировка
+- ~~D&D сортировка~~
 - ~~поиск и фильтрация~~
 - уведомления о невыполненных задачах на главной
 - Контроллер на фронте с гридом задач (здесь можно написать еще про хлебные крошки и сео-теги)
