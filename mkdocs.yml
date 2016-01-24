@@ -3,7 +3,7 @@ site_url: http://docs1.yupe.ru
 repo_url: https://github.com/amyLabs/yupe-guides
 site_description: Документация по платформе Юпи!
 site_author: amylabs team
-google_analytics: ['UA-61725465-4', 'docs1.yupe.ru']
+google_analytics: ['UA-61725465-4', 'docs.yupe.ru']
 theme: readthedocs
 theme_dir: themes/readthedocs
 pages:
