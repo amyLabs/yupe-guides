@@ -15,6 +15,7 @@ pages:
 - 'Обновление': 'update.md'
 - 'Обзор модулей': 'modules.md'
 - 'Настройки сайта': 'settings.md'
+- 'Создание модуля': 'module-create.md'
 - 'Помощь проекту': 'assistance.project.md'
 - 'Компоненты':
     - 'Мигратор': 'migrator.index.md'
@@ -30,4 +31,3 @@ pages:
     - 'Установка на Linux': 'ubuntu.md'
     - 'Конфигурация модулей с настройками пользователей': 'userspace.config.md'
 - 'Тестирование': 'testing.md'
-
