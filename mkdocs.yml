@@ -13,7 +13,9 @@ pages:
 - 'Введение': 'intro.md'
 - 'Установка': 'install.md'
 - 'Обновление': 'update.md'
-- 'Обзор модулей': 'modules.md'
+- 'Модули':
+    - 'Обзор модулей': 'modules.md'
+    - 'Создание модуля': 'module-create.md'
 - 'Настройки сайта': 'settings.md'
 - 'Создание модуля': 'module-create.md'
 - 'Помощь проекту': 'assistance.project.md'
