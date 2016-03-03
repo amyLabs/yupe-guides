@@ -7,6 +7,6 @@
 - Плаксунов Юрий [http://amylabs.ru](http://amylabs.ru)
 - Филимонов Олег [http://amylabs.ru](http://amylabs.ru/)
 
-И еще порядка [70 контрибьюторов на Github](https://github.com/yupe/yupe/graphs/contributors)!
+И еще более [70 контрибьюторов на Github](https://github.com/yupe/yupe/graphs/contributors)!
 
 **[Ждем только тебя !](http://yupe.ru/contacts)**
