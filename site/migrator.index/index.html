@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Мигратор - Юпи!</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Мигратор";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-61725465-4', 'docs.yupe.ru');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Юпи!</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Поиск по документации" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <ul class="subnav">
+    <li><span>О проекте</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="..">Возможности</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../team/">Команда</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../intro/">Введение</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../install/">Установка</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../update/">Обновление</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../modules/">Обзор модулей</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../settings/">Настройки сайта</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../assistance.project/">Помощь проекту</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Компоненты</span></li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Мигратор</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#_1">Компонент "Мигратор"</a></li>
+                
+                    <li><a class="toctree-l4" href="#yii-">Отличия от Yii-миграций</a></li>
+                
+                    <li><a class="toctree-l4" href="#_2">Как писать миграции для "Юпи"</a></li>
+                
+                    <li><a class="toctree-l4" href="#_3">Рассмотрим пример миграции для "Юпи"</a></li>
+                
+                    <li><a class="toctree-l4" href="#_4">Методы</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../config.manager/">Управление конфигами</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../atomfeed/">Генерация Atom-ленты</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../cwebuser.issues/">Проблемы CWebUser и модуля Gii</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../events/">Работа с событиями</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../zend.search/">Модуль поиска на основе Zend Lucene</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Настройки</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../apc.options/">Оптимальные настройки APC</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../editors.eclipse/">Работа с eclipse</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../memcached/">Конфигурация Memcahed</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../ubuntu/">Установка на Linux</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../userspace.config/">Конфигурация модулей с настройками пользователей</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../testing/">Тестирование</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Юпи!</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Документация</a> &raquo;</li>
+    
+      
+        
+          <li>Компоненты &raquo;</li>
+        
+      
+    
+    <li>Мигратор</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/amyLabs/yupe-guides" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="_1">Компонент "Мигратор"</h1>
+<p>Для обновление базы данных в "Юпи" используются миграционные файлы, в которых описаны необходимые действия. Есть возможность "накатывания" и "отката" миграции, соответственно методы <code>safeUp</code> и <code>safeDown</code>. Миграционные файлы это почти теже самые миграции, что есть в <a href="http://www.yiiframework.com/doc/guide/1.1/ru/database.migration">Yii</a>, есть лишь небольшие правки, которые были внесены для корректной работы поверх поддерживаемых СУБД.</p>
+<h2 id="yii-">Отличия от Yii-миграций</h2>
+<p>Начнём пожалуй с того, что вместо <code>CDbMigration</code> в "Юпи" используется <code>yupe\components\DbMigration</code> который дополняет своим функционалом базовый класс, а именно:</p>
+<ul>
+<li>метод <code>getOptions</code> который возвращает опции создания таблицы для различных СУБД</li>
+<li>метод <code>normTable</code> для "нормализации" именни таблицы</li>
+<li>метод <code>dropTableWithForeignKeys</code> в котором планируется/реализовано удаление таблицы вместе с foreign-ключами</li>
+</ul>
+<h2 id="_2">Как писать миграции для "Юпи"</h2>
+<p>Написание миграций для Юпи почти ничем не отличается от того, как это работает в <a href="http://www.yiiframework.com/doc/guide/1.1/ru/database.migration">Yii</a>, достаточно лишь использовать как базовый класс <code>yupe\components\DbMigration</code> и работать с методами, которые рекомендуются в нём, для совместимости со всеми поддерживаемыми СУБД. Имя файла и класса миграции формируется следующим образом - <code>m{yymmdd_time_name}</code>, например <code>130503_091124_BlogPostImage</code>. В примере используется миграция, котрорая создана 03-05-2013 в 09:11:24 с именем BlogPostImage.
+Миграции необходимо располагать в каталоге <code>./protected/modules/&lt;module&gt;/install/migrations/</code>, это делается для того, чтобы миграции относились к определённым модулям.</p>
+<h2 id="_3">Рассмотрим пример миграции для "Юпи"</h2>
+<p>Ниже представлен листинг миграции для "Юпи" на примере модуля "Блог":</p>
+<pre><code class="php">
+/**
+ * Blog install migration
+ * Класс миграций для модуля Blog:
+ *
+ * @category YupeMigration
+ * @package  yupe
+ * @author   YupeTeam <team@yupe.ru>
+ * @license  BSD https://raw.github.com/yupe/yupe/master/LICENSE
+ * @link     http://yupe.ru
+ **/
+class m000000_000000_blog_base extends yupe\components\DbMigration
+{
+    /**
+     * Функция настройки и создания таблицы:
+     *
+     * @return null
+     **/
+    public function safeUp()
+    {
+        // blog
+        $this->createTable(
+            '{{blog_blog}}',
+            array(
+                'id' => "pk",
+                'category_id' => "integer DEFAULT NULL",
+                'name' => "varchar(250) NOT NULL",
+                'description' => "text",
+                'icon' => "varchar(250) NOT NULL DEFAULT ''",
+                'slug' => "varchar(150) NOT NULL",
+                'lang' => "char(2) DEFAULT NULL",
+                'type' => "integer NOT NULL DEFAULT '1'",
+                'status' => "integer NOT NULL DEFAULT '1'",
+                'create_user_id' => "integer NOT NULL",
+                'update_user_id' => "integer NOT NULL",
+                'create_date' => "integer NOT NULL",
+                'update_date' => "integer NOT NULL",
+            ),
+            $this->getOptions()
+        );
+
+        // ix
+        $this->createIndex("ux_{{blog_blog}}_slug_lang", '{{blog_blog}}', "slug,lang", true);
+        $this->createIndex("ix_{{blog_blog}}_create_user", '{{blog_blog}}', "create_user_id", false);
+        $this->createIndex("ix_{{blog_blog}}_update_user", '{{blog_blog}}', "update_user_id", false);
+        $this->createIndex("ix_{{blog_blog}}_status", '{{blog_blog}}', "status", false);
+        $this->createIndex("ix_{{blog_blog}}_type", '{{blog_blog}}', "type", false);
+        $this->createIndex("ix_{{blog_blog}}_create_date", '{{blog_blog}}', "create_date", false);
+        $this->createIndex("ix_{{blog_blog}}_update_date", '{{blog_blog}}', "update_date", false);
+        $this->createIndex("ix_{{blog_blog}}_lang", '{{blog_blog}}', "lang", false);
+        $this->createIndex("ix_{{blog_blog}}_slug", '{{blog_blog}}', "slug", false);
+        $this->createIndex("ix_{{blog_blog}}_category_id", '{{blog_blog}}', "category_id", false);
+
+        // fk
+        $this->addForeignKey("fk_{{blog_blog}}_create_user", '{{blog_blog}}', 'create_user_id', '{{user_user}}', 'id', 'CASCADE', 'NO ACTION');
+        $this->addForeignKey("fk_{{blog_blog}}_update_user", '{{blog_blog}}', 'update_user_id', '{{user_user}}', 'id', 'NO ACTION', 'NO ACTION');
+        $this->addForeignKey("fk_{{blog_blog}}_category_id", '{{blog_blog}}', 'category_id', '{{category_category}}', 'id', 'SET NULL', 'NO ACTION');
+
+
+        // post
+        $this->createTable(
+            '{{blog_post}}',
+            array(
+                'id' => "pk",
+                'blog_id' => "integer NOT NULL",
+                'create_user_id' => "integer NOT NULL",
+                'update_user_id' => "integer NOT NULL",
+                'create_date' => "integer NOT NULL",
+                'update_date' => "integer NOT NULL",
+                'publish_date' => "integer NOT NULL",
+                'slug' => "varchar(150) NOT NULL",
+                'lang' => "char(2) DEFAULT NULL",
+                'title' => "varchar(250) NOT NULL",
+                'quote' => "varchar(250) NOT NULL DEFAULT ''",
+                'content' => "text NOT NULL",
+                'link' => "varchar(250) NOT NULL DEFAULT ''",
+                'status' => "integer NOT NULL DEFAULT '0'",
+                'comment_status' => "integer NOT NULL DEFAULT '1'",
+                'create_user_ip' => "varchar(20) NOT NULL",
+                'access_type' => "integer NOT NULL DEFAULT '1'",
+                'keywords' => "varchar(250) NOT NULL DEFAULT ''",
+                'description' => "varchar(250) NOT NULL DEFAULT ''",
+            ),
+            $this->getOptions()
+        );
+
+        //ix
+        $this->createIndex("ux_{{blog_post}}_lang_slug", '{{blog_post}}', "slug,lang", true);
+        $this->createIndex("ix_{{blog_post}}_blog_id", '{{blog_post}}', "blog_id", false);
+        $this->createIndex("ix_{{blog_post}}_create_user_id", '{{blog_post}}', "create_user_id", false);
+        $this->createIndex("ix_{{blog_post}}_update_user_id", '{{blog_post}}', "update_user_id", false);
+        $this->createIndex("ix_{{blog_post}}_status", '{{blog_post}}', "status", false);
+        $this->createIndex("ix_{{blog_post}}_access_type", '{{blog_post}}', "access_type", false);
+        $this->createIndex("ix_{{blog_post}}_comment_status", '{{blog_post}}', "comment_status", false);
+        $this->createIndex("ix_{{blog_post}}_lang", '{{blog_post}}', "lang", false);
+        $this->createIndex("ix_{{blog_post}}_slug", '{{blog_post}}', "slug", false);
+        $this->createIndex("ix_{{blog_post}}_publish_date", '{{blog_post}}', "publish_date", false);
+
+        //fks 
+        $this->addForeignKey("fk_{{blog_post}}_blog", '{{blog_post}}', 'blog_id', '{{blog_blog}}', 'id', 'CASCADE', 'NO ACTION');
+        $this->addForeignKey("fk_{{blog_post}}_create_user", '{{blog_post}}', 'create_user_id', '{{user_user}}', 'id', 'CASCADE', 'NO ACTION');
+        $this->addForeignKey("fk_{{blog_post}}_update_user", '{{blog_post}}', 'update_user_id', '{{user_user}}', 'id', 'NO ACTION', 'NO ACTION');
+
+        // user to blog
+        $this->createTable(
+            '{{blog_user_to_blog}}',
+            array(
+                'id' => "pk",
+                'user_id' => "integer NOT NULL",
+                'blog_id' => "integer NOT NULL",
+                'create_date' => "integer NOT NULL",
+                'update_date' => "integer NOT NULL",
+                'role' => "integer NOT NULL DEFAULT '1'",
+                'status' => "integer NOT NULL DEFAULT '1'",
+                'note' => "varchar(250) NOT NULL DEFAULT ''",
+            ),
+            $this->getOptions()
+        );
+
+        //ix
+        $this->createIndex(
+            "ux_{{blog_user_to_blog}}_blog_user_to_blog_u_b",
+            '{{blog_user_to_blog}}',
+            "user_id,blog_id",
+            true
+        );
+        $this->createIndex(
+            "ix_{{blog_user_to_blog}}_blog_user_to_blog_user_id",
+            '{{blog_user_to_blog}}',
+            "user_id",
+            false
+        );
+        $this->createIndex(
+            "ix_{{blog_user_to_blog}}_blog_user_to_blog_id",
+            '{{blog_user_to_blog}}',
+            "blog_id",
+            false
+        );
+        $this->createIndex(
+            "ix_{{blog_user_to_blog}}_blog_user_to_blog_status",
+            '{{blog_user_to_blog}}',
+            "status",
+            false
+        );
+        $this->createIndex("ix_{{blog_user_to_blog}}_blog_user_to_blog_role", '{{blog_user_to_blog}}', "role", false);
+
+        //fk
+        $this->addForeignKey("fk_{{blog_user_to_blog}}_blog_user_to_blog_user_id", '{{blog_user_to_blog}}', 'user_id', '{{user_user}}', 'id', 'CASCADE', 'NO ACTION');
+        $this->addForeignKey("fk_{{blog_user_to_blog}}_blog_user_to_blog_blog_id", '{{blog_user_to_blog}}', 'blog_id', '{{blog_blog}}', 'id', 'CASCADE', 'NO ACTION');
+
+        // tags
+        $this->createTable(
+            '{{blog_tag}}',
+            array(
+                'id' => 'pk',
+                'name' => 'varchar(255) NOT NULL',
+            ),
+            $this->getOptions()
+        );
+
+        //ix
+        $this->createIndex("ux_{{blog_tag}}_tag_name", '{{blog_tag}}', "name", true);
+
+        // post to tag
+        $this->createTable(
+            '{{blog_post_to_tag}}',
+            array(
+                'post_id' => 'integer NOT NULL',
+                'tag_id' => 'integer NOT NULL',
+                'PRIMARY KEY (post_id, tag_id)'
+            ),
+            $this->getOptions()
+        );
+
+        //ix  
+        $this->createIndex("ix_{{blog_post_to_tag}}_post_id", '{{blog_post_to_tag}}', "post_id", false);
+        $this->createIndex("ix_{{blog_post_to_tag}}_tag_id", '{{blog_post_to_tag}}', "tag_id", false);
+
+        //fk
+        $this->addForeignKey("fk_{{blog_post_to_tag}}_post_id", '{{blog_post_to_tag}}', 'post_id', '{{blog_post}}', 'id', 'CASCADE', 'NO ACTION');
+        $this->addForeignKey("fk_{{blog_post_to_tag}}_tag_id", '{{blog_post_to_tag}}', 'tag_id', '{{blog_tag}}', 'id', 'CASCADE', 'NO ACTION');
+    }
+
+    /**
+     * Удаляем таблицы
+     *
+     * @return null
+     **/
+    public function safeDown()
+    {
+        $this->dropTableWithForeignKeys('{{blog_post_to_tag}}');
+        $this->dropTableWithForeignKeys('{{blog_tag}}');
+        $this->dropTableWithForeignKeys('{{blog_post}}');
+        $this->dropTableWithForeignKeys('{{blog_user_to_blog}}');
+        $this->dropTableWithForeignKeys('{{blog_blog}}');
+    }
+}
+</code></pre>
+
+<p>Компонент "Мигратор" - предназначен для использования миграций из веб части. То есть это по сути тот же компонент, который используется в Yii, но переписан с учётом специфики работы в фронт-части.</p>
+<p>Компонент доступен из namespace'a <code>yupe\components\Migrator</code> и для своей работы использует следующие компоненты из глобального namespace'a:</p>
+<ul>
+<li>Yii;</li>
+<li>CDbCacheDependency;</li>
+<li>ErrorException;</li>
+<li>CException;</li>
+<li>CDbConnection;</li>
+<li>TagsCache;</li>
+<li>CHtml;</li>
+</ul>
+<h2 id="_4">Методы</h2>
+<h3 id="init-">Метод init - Инициализируем класс</h3>
+<p><a href="https://github.com/yupe/yupe/blob/master/protected/modules/yupe/components/Migrator.php#L38">листинг</a></p>
+<p>В данном методе перед инициализацией компонента проверяется наличие таблицы истории миграций, если же её нет - вызывается метод <code>createMigrationHistoryTable()</code></p>
+<h3 id="updatetolatest-">Метод updateToLatest - Обновление модуля до актуальной миграции</h3>
+<p><a href="https://github.com/yupe/yupe/blob/master/protected/modules/yupe/components/Migrator.php#L55">листинг</a></p>
+<p>В данном методе мы получаем список ещё не установленных миграций и постепенно "накатываем" их вызывая метод <code>migrateUp</code>. Если же список новых миграций пуст - сообщаем об этом в лог.</p>
+<pre>
+@param string $module - id-модуля
+@return bool true
+</pre>
+
+<h3 id="checkforbadmigration-">Метод checkForBadMigration - Проверяем на незавершённые миграции:</h3>
+<p><a href="https://github.com/yupe/yupe/blob/master/protected/modules/yupe/components/Migrator.php#L55">листинг</a></p>
+<p>Метод проверяет список миграций на незавершённые ("плохие") миграции и возвращаем результат, есть таковые миграции у данного модуля или нет.</p>
+<pre>
+@param string $module - id-модуля
+@param string $class  - класс-миграции
+
+@return bool обновились ли до миграции
+</pre>
+
+<h3 id="migrateup-">Метод migrateUp - Обновляем миграцию:</h3>
+<p><a href="https://github.com/yupe/yupe/blob/master/protected/modules/yupe/components/Migrator.php#L210">листинг</a></p>
+<p>Метод "накатывания" миграции до нового состяния с записью результата в журнал миграций.</p>
+<pre>
+@param string $module - required module
+@param string $class  - name of migration class
+
+@return bool is updated to migration
+</pre>
+
+<h3 id="migratedown-">Метод migrateDown - Даунгрейд миграции:</h3>
+<p><a href="https://github.com/yupe/yupe/blob/master/protected/modules/yupe/components/Migrator.php#L282">листинг</a></p>
+<p>Метод "откатывания" миграции до старого состяния с удалением записи о данной миграции из журнала миграций.</p>
+<pre>
+@param string $module - required module
+@param string $class  - name of migration class
+
+@return bool is downgraded to migration
+</pre>
+
+<h3 id="instantiatemigration-">Метод instantiateMigration - инициализация класса миграции:</h3>
+<p><a href="https://github.com/yupe/yupe/blob/master/protected/modules/yupe/components/Migrator.php#L345">листинг</a></p>
+<p>Инициализируем класс миграции для последующей работы с ним.</p>
+<pre>
+@param string $module - required module
+@param string $class  - class of migration
+
+@return mixed version and apply time
+</pre>
+
+<h3 id="getdbconnection-">Метод getDbConnection - получаем коннектор к БД</h3>
+<p><a href="https://github.com/yupe/yupe/blob/master/protected/modules/yupe/components/Migrator.php#L359">листинг</a></p>
+<pre>@return db connection or make exception</pre>
+
+<h3 id="getmigrationhistory-">Метод getMigrationHistory - получаем историю миграций</h3>
+<p><a href="https://github.com/yupe/yupe/blob/master/protected/modules/yupe/components/Migrator.php#L382">листинг</a></p>
+<pre>
+@param string  $module - required module
+@param integer $limit  - limit of array
+
+@return mixed version and apply time
+</pre>
+
+<h3 id="createmigrationhistorytable-">Метод createMigrationHistoryTable - создаём таблицу миграций</h3>
+<p><a href="https://github.com/yupe/yupe/blob/master/protected/modules/yupe/components/Migrator.php#L418">листинг</a></p>
+<pre>@return nothing</pre>
+
+<h3 id="getnewmigrations-">Метод getNewMigrations - проверка на наличие новых миграций для модуля</h3>
+<p><a href="https://github.com/yupe/yupe/blob/master/protected/modules/yupe/components/Migrator.php#L455">листинг</a></p>
+<pre>
+@param string $module - required module
+
+@return mixed new migrations
+</pre>
+
+<h3 id="checkforupdates-">Метод checkForUpdates - получение списка обновлений для выбранных модулей</h3>
+<p><a href="https://github.com/yupe/yupe/blob/master/protected/modules/yupe/components/Migrator.php#L496">листинг</a></p>
+<pre>
+@param array $modules - list of modules
+
+@return mixed new migrations
+</pre>
+
+<h3 id="getmoduleswithdbinstalled-">Метод getModulesWithDBInstalled - получаем список модулей с установленными миграциями</h3>
+<p><a href="https://github.com/yupe/yupe/blob/master/protected/modules/yupe/components/Migrator.php#L514">листинг</a></p>
+<pre>
+@return mixed db-installed
+</pre>
+
+<p><strong>При возникновении проблем - <a href="http://amylabs.ru/contact">напишите нам</a>!</strong></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../config.manager/" class="btn btn-neutral float-right" title="Управление конфигами"/>Далее <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../assistance.project/" class="btn btn-neutral" title="Помощь проекту"><span class="icon icon-circle-arrow-left"></span> Назад</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../assistance.project/" style="color: #fcfcfc;">&laquo; Назад</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../config.manager/" style="color: #fcfcfc">Далее &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

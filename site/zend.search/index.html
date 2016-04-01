@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Модуль поиска на основе Zend Lucene - Юпи!</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Модуль поиска на основе Zend Lucene";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-61725465-4', 'docs.yupe.ru');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Юпи!</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Поиск по документации" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <ul class="subnav">
+    <li><span>О проекте</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="..">Возможности</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../team/">Команда</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../intro/">Введение</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../install/">Установка</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../update/">Обновление</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../modules/">Обзор модулей</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../settings/">Настройки сайта</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../assistance.project/">Помощь проекту</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Компоненты</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../migrator.index/">Мигратор</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../config.manager/">Управление конфигами</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../atomfeed/">Генерация Atom-ленты</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../cwebuser.issues/">Проблемы CWebUser и модуля Gii</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../events/">Работа с событиями</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Модуль поиска на основе Zend Lucene</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#zend-lucene">Модуль поиска на основе Zend Lucene</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Настройки</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../apc.options/">Оптимальные настройки APC</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../editors.eclipse/">Работа с eclipse</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../memcached/">Конфигурация Memcahed</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../ubuntu/">Установка на Linux</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../userspace.config/">Конфигурация модулей с настройками пользователей</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../testing/">Тестирование</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Юпи!</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Документация</a> &raquo;</li>
+    
+      
+        
+          <li>Компоненты &raquo;</li>
+        
+      
+    
+    <li>Модуль поиска на основе Zend Lucene</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/amyLabs/yupe-guides" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="zend-lucene">Модуль поиска на основе Zend Lucene</h1>
+<p>Установка:</p>
+<ul>
+<li>Распаковать в модули Юпи!</li>
+<li>Включить модуль в админке сайта</li>
+<li>Открыть файл /protected/config/modules/zendsearch.php</li>
+<li>В нем есть описание переменной searchModels:</li>
+</ul>
+<pre><code class="php">
+'searchModels' => array(
+    // индексируем страницы
+    'Page' => array(
+        'path' => 'application.modules.page.models.Page',
+        'titleColumn' => 'title',
+        'linkColumn'    => 'slug',
+        'linkPattern'   => '/page/page/view?slug={slug}',
+        'textColumns' => 'body,title_short,keywords,description',
+   ),
+   // индексируем новости
+   'News' => array(
+        'path' => 'application.modules.news.models.News',
+        'titleColumn' => 'title',
+        'linkColumn'    => 'alias',
+        'linkPattern'   => '/news/news/view?title={alias}',
+        'textColumns' => 'full_text,short_text,keywords,description',
+   ),
+   // индексируем посты
+   'Post' => array(
+         'path' => 'application.modules.blog.models.Post',
+         'titleColumn' => 'title',
+         'linkColumn' => 'slug',
+         'linkPattern' => '/blog/post/view?slug={slug}',
+         'textColumns' => 'slug,title,quote,content',
+   ),
+),
+</code></pre>
+
+<p>Это описание моделей, которые нужно включить в индекс:</p>
+<ul>
+<li>Page - название модели со следующими параметрами:</li>
+<li>path - алиас пути до модели (для уточнения где лежит эта модель)</li>
+<li>titleColumn - заголовок, который будет выводиться в списке результатов поиска</li>
+<li>linkColumn - поле таблицы, где хранится ссылка на модель</li>
+<li>linkPattern - паттерн ссылки на страницу модели</li>
+<li>textColumns - здесь через запятую нужно перечислить все поля таблицы, которые нужно загнать в индекс Важно! первым нужно указать поле, которое будет выводиться в качестве сниппета для страниц результатов поиска (сниппет формируется путем обрезки текста до 600 знаков, правильнее вывести это значение в свойства модуля, но руки не дошли до этого)</li>
+</ul>
+<p>Далее перейти на страницу модуля <strong>http://site.ru/zendsearch/default/index</strong> и обновить индекс поиска.</p>
+<p>Индекс поиска по умолчанию хранится в папке <strong>/protected/runtime/search</strong></p>
+<p>После этого можно добавлять виджет формы поиска на страницы сайта:
+<pre><code class="php">
+    $this-&gt;widget('application.modules.zendsearch.widgets.SearchBlockWidget');
+</code></pre></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../apc.options/" class="btn btn-neutral float-right" title="Оптимальные настройки APC"/>Далее <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../events/" class="btn btn-neutral" title="Работа с событиями"><span class="icon icon-circle-arrow-left"></span> Назад</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../events/" style="color: #fcfcfc;">&laquo; Назад</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../apc.options/" style="color: #fcfcfc">Далее &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Установка на Linux - Юпи!</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Установка на Linux";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-61725465-4', 'docs.yupe.ru');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Юпи!</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Поиск по документации" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <ul class="subnav">
+    <li><span>О проекте</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="..">Возможности</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../team/">Команда</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../intro/">Введение</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../install/">Установка</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../update/">Обновление</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../modules/">Обзор модулей</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../settings/">Настройки сайта</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../assistance.project/">Помощь проекту</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Компоненты</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../migrator.index/">Мигратор</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../config.manager/">Управление конфигами</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../atomfeed/">Генерация Atom-ленты</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../cwebuser.issues/">Проблемы CWebUser и модуля Gii</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../events/">Работа с событиями</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../zend.search/">Модуль поиска на основе Zend Lucene</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Настройки</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../apc.options/">Оптимальные настройки APC</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../editors.eclipse/">Работа с eclipse</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../memcached/">Конфигурация Memcahed</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Установка на Linux</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#linux">Установка Юпи! на Linux</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#_1">Установка без веб сервера ("С нуля")</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../userspace.config/">Конфигурация модулей с настройками пользователей</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../testing/">Тестирование</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Юпи!</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Документация</a> &raquo;</li>
+    
+      
+        
+          <li>Настройки &raquo;</li>
+        
+      
+    
+    <li>Установка на Linux</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/amyLabs/yupe-guides" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="linux">Установка Юпи! на Linux</h1>
+<p>За пример взят дистрибутив <strong>Ubuntu 12.04</strong></p>
+<p>P.S. Данный пример установки вебсервера "В слепую" большинство операций и настроек система делает за вас автоматически, пример не расчитан на "тонкую настройку" apache2 сервера, а приведен как пример быстрого начала работы с CMS Yupe!</p>
+<h1 id="_1">Установка без веб сервера ("С нуля")</h1>
+<p>Устанавливаем пакет tasksel. Открываем терминал пишем:</p>
+<p><strong>sudo apt-get install tasksel</strong></p>
+<p>После чего ставим сборку apache2+mysql+php</p>
+<p><strong>sudo tasksel install lamp-server либо sudo apt-get install lamp-server</strong></p>
+<p>В процессе установки указываем пароль и пользователя для базы данных.
+Проверяем работу apache2</p>
+<p><strong>http://localhost/</strong></p>
+<p>Должна открыться страница с заголовком "It works!"</p>
+<p>Ставим phpmyadmin</p>
+<p><strong>sudo apt-get install phpmyadmin</strong></p>
+<p>Переходим по ссылке:
+http://localhost/phpmyadmin.</p>
+<p>Для входа используем указанный выше логин и пароль.
+Создаем базу анных для Yupe
+К примеру с помошью ранее установленного phpmyadmin.
+Подключаем mod_rewrite к Apache2</p>
+<p><strong>sudo a2enmod rewrite</strong></p>
+<p>Редактируем конфигурацию хостов:</p>
+<p><strong>sudo nano /etc/apache2/sites-available/default</strong></p>
+<p>А именно, изменяем параметр</p>
+<p><strong>AllowOverride None на AllowOverride All</strong></p>
+<p>Перезагружаем Apache2</p>
+<p><strong>sudo service apache2 restart</strong></p>
+<p>Приступаем к установке Юпи!</p>
+<p>Из корневого каталога переходим в /var/www/ ,
+Создаем папку для Yupe! к примеру "myblog".
+Копируем в нее все файлы cms.</p>
+<p>При открытиии ссылки <strong>http://localhost/myblog</strong> у Вас должно открываться дерево файлов.</p>
+<p>Раздаем права на папку с Yupe!</p>
+<p><strong>chmod -R 755 /var/www/myblog/</strong></p>
+<p>Начинаем установку Yupe!
+Переходим по ссылке <strong>http://localhost/myblog/public</strong> , должна открыться начальная страница установки.
+Следуем по пунктам установщика и вносим необходимые данные.</p>
+<p>Решение проблем с mod_rewrite</p>
+<p>Если при переходе по ссылке http://localhost/myblog/public возникает ошибка 500, делаем следующее:
+Переходим в файл дирректив который мы уже правили</p>
+<p><strong>sudo nano /etc/apache2/sites-available/default</strong></p>
+<p>меняем правила в Directory /var/www/ на следующие:</p>
+<p>Options Indexes FollowSymLinks</p>
+<p>AllowOverride None</p>
+<p>Allow from all</p>
+<p>Под Directory /var/www/ пишем диррективу для нашего сайта:</p>
+<p><Directory /var/www/myblog/></p>
+<p>Options FollowSymLinks</p>
+<p><strong>AllowOverride All</strong></p>
+<p></Directory></p>
+<p>Переходим по ссылке http://localhost/myblog/public</p>
+<p>Автор <a href="https://github.com/hitakiri">https://github.com/hitakiri</a></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../userspace.config/" class="btn btn-neutral float-right" title="Конфигурация модулей с настройками пользователей"/>Далее <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../memcached/" class="btn btn-neutral" title="Конфигурация Memcahed"><span class="icon icon-circle-arrow-left"></span> Назад</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../memcached/" style="color: #fcfcfc;">&laquo; Назад</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../userspace.config/" style="color: #fcfcfc">Далее &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>
