@@ -36,3 +36,5 @@ pages:
     - 'Конфигурация модулей с настройками пользователей': 'userspace.config.md'
 - 'Как сделать ?': 'how.md'
 - 'Тестирование': 'testing.md'
+markdown_extensions:
+    - admonition:
