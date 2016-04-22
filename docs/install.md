@@ -109,10 +109,6 @@ composer install
 !!! danger "Важно!"
     Обратите внимание, что корень сайта должен быть настроен на каталог public. Именно в public находится index.php, требуемый для работы сайта.
 
-Если в качестве хостинга вы выбрали [timeweb](http://timeweb.com/ru/services/hosting/?i=28284) - смотрите наше короткое видео:
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/OSML7u0KXuE" frameborder="0" allowfullscreen></iframe>
-
 
 
 ## Мастер установки Юпи!
