@@ -8,10 +8,12 @@ theme: readthedocs
 theme_dir: themes/readthedocs
 pages:
 - 'О проекте':
-    - 'Возможности': 'index.md'
-    - 'Команда': 'team.md'
-- 'Введение':
+    - 'Начало': 'index.md'
     - 'Знакомство с Yii': 'intro.md'
+    - 'Помощь проекту': 'assistance.project.md'
+    - 'Команда': 'team.md'
+    - 'Как сделать ?': 'how.md'
+- 'Введение':
     - 'Системные требования': 'hosting.md'
     - 'Установка': 'install.md'
     - 'Обновление': 'update.md'
@@ -19,22 +21,18 @@ pages:
     - 'Обзор модулей': 'modules.md'
     - 'Создание модуля': 'module-create.md'
 - 'Настройки сайта': 'settings.md'
-- 'Создание модуля': 'module-create.md'
-- 'Помощь проекту': 'assistance.project.md'
-- 'Компоненты':
+- 'Разработчику':
     - 'Мигратор': 'migrator.index.md'
     - 'Управление конфигами': 'config.manager.md'
     - 'Генерация Atom-ленты': 'atomfeed.md'
     - 'Проблемы CWebUser и модуля Gii': 'cwebuser.issues.md'
     - 'Работа с событиями': 'events.md'
     - 'Модуль поиска на основе Zend Lucene': 'zend.search.md'
-- 'Настройки':
+    - 'Тестирование': 'testing.md'
     - 'Оптимальные настройки APC': 'apc.options.md'
-    - 'Работа с eclipse' : 'editors.eclipse.md'
+    - 'Работа с eclipse': 'editors.eclipse.md'
     - 'Конфигурация Memcahed': 'memcached.md'
     - 'Установка на Linux': 'ubuntu.md'
     - 'Конфигурация модулей с настройками пользователей': 'userspace.config.md'
-- 'Как сделать ?': 'how.md'
-- 'Тестирование': 'testing.md'
 markdown_extensions:
     - admonition:

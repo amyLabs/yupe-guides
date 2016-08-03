@@ -20,6 +20,10 @@
 * Установка с помощью Composer (рекомендуем разработчикам)
 * Клонирование репозитория с GitHub (рекомендуем разработчикам)
 
+## Установка на OpenServer (видео)
+
+<iframe width="550" height="315" src="https://www.youtube.com/embed/PA6_wmQqlJw" frameborder="0" allowfullscreen></iframe>
+
 ## Установка через Composer
 
 > Для развертывания Юпи! вам понадобится [Composer](https://getcomposer.org/) и [Git](http://git-scm.com/downloads).
