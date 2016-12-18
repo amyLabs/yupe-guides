@@ -66,7 +66,21 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="..">Возможности</a>
+        <a class="" href="..">Начало</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../intro/">Знакомство с Yii</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../assistance.project/">Помощь проекту</a>
         
     </li>
 
@@ -78,17 +92,29 @@
     </li>
 
         
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../how/">Как сделать ?</a>
+        
+    </li>
+
+        
     </ul>
 <li>
           
             <li>
+    <ul class="subnav">
+    <li><span>Введение</span></li>
+
+        
+            
     <li class="toctree-l1 ">
-        <a class="" href="../intro/">Введение</a>
+        <a class="" href="../hosting/">Системные требования</a>
         
     </li>
-<li>
-          
-            <li>
+
+        
+            
     <li class="toctree-l1 current">
         <a class="current" href="./">Установка</a>
         
@@ -96,32 +122,52 @@
             
                 <li class="toctree-l3"><a href="#_1">Установка и запуск "Юпи!"</a></li>
                 
+                    <li><a class="toctree-l4" href="#openserver">Установка на OpenServer (видео)</a></li>
+                
                     <li><a class="toctree-l4" href="#composer">Установка через Composer</a></li>
                 
                     <li><a class="toctree-l4" href="#git">Установка через Git</a></li>
                 
                     <li><a class="toctree-l4" href="#_2">Установка из архива</a></li>
                 
-                    <li><a class="toctree-l4" href="#_3">Установка Юпи!</a></li>
+                    <li><a class="toctree-l4" href="#_3">Мастер установки Юпи!</a></li>
                 
             
             </ul>
         
     </li>
-<li>
-          
-            <li>
+
+        
+            
     <li class="toctree-l1 ">
         <a class="" href="../update/">Обновление</a>
         
     </li>
+
+        
+    </ul>
 <li>
           
             <li>
+    <ul class="subnav">
+    <li><span>Модули</span></li>
+
+        
+            
     <li class="toctree-l1 ">
         <a class="" href="../modules/">Обзор модулей</a>
         
     </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../module-create/">Создание модуля</a>
+        
+    </li>
+
+        
+    </ul>
 <li>
           
             <li>
@@ -132,15 +178,8 @@
 <li>
           
             <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../assistance.project/">Помощь проекту</a>
-        
-    </li>
-<li>
-          
-            <li>
     <ul class="subnav">
-    <li><span>Компоненты</span></li>
+    <li><span>Разработчику</span></li>
 
         
             
@@ -185,12 +224,11 @@
     </li>
 
         
-    </ul>
-<li>
-          
-            <li>
-    <ul class="subnav">
-    <li><span>Настройки</span></li>
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../testing/">Тестирование</a>
+        
+    </li>
 
         
             
@@ -231,13 +269,6 @@
     </ul>
 <li>
           
-            <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../testing/">Тестирование</a>
-        
-    </li>
-<li>
-          
         </ul>
       </div>
       &nbsp;
@@ -259,6 +290,10 @@
     <li><a href="..">Документация</a> &raquo;</li>
     
       
+        
+          <li>Введение &raquo;</li>
+        
+      
     
     <li>Установка</li>
     <li class="wy-breadcrumbs-aside">
@@ -275,12 +310,28 @@
             <div class="section">
               
                 <h1 id="_1">Установка и запуск "Юпи!"</h1>
-<p>Юпи! нетребовательна к ресурсам, поэтому для проектов с невысокой посещаемостью подойдет любой виртуальный хостинг, на котором будет установлены PHP (не ниже 5.4) и MySQL.
-Обо всех других расширениях, необходимых для работы сайта, вы будете проинформированы на 3-м шаге установки системы.</p>
-<p>Развертывание проекта на сервере возможно тремя способами:
-<em> через Composer,
-</em> клонирование репозитория с GitHub,
-* из zip-архива.</p>
+<div class="admonition note">
+<p class="admonition-title">Обратите внимание!</p>
+<p>Перед установкой убедитесь, что ваш хостинг удовлетворяет <a href="../hosting/">системным требованиям</a> платформы.</p>
+</div>
+<p>Юпи! нетребовательна к ресурсам, поэтому для проектов с невысокой и средней посещаемостью подойдет любой <a href="http://yupe.ru/service/hosting">виртуальный хостинг</a>, на котором будет установлены PHP (не ниже 5.4) и MySQL.
+Обо всех остальных расширениях, необходимых для работы сайта, вы будете проинформированы на 3-м шаге установки системы.</p>
+<p>Установку платформы можно разделить на следующие этапы:</p>
+<ul>
+<li>Получение дистрибтива</li>
+<li>Подготовка хостинга или сервера</li>
+<li>Установка платформы</li>
+<li>Настройка и запуск</li>
+</ul>
+<p>Получение дистрибутива возможно тремя способами:</p>
+<ul>
+<li>Скачивание zip-архива (рекомендуем новичкам)</li>
+<li>Установка с помощью Composer (рекомендуем разработчикам)</li>
+<li>Клонирование репозитория с GitHub (рекомендуем разработчикам)</li>
+</ul>
+<h2 id="openserver">Установка на OpenServer (видео)</h2>
+<iframe width="550" height="315" src="https://www.youtube.com/embed/PA6_wmQqlJw" frameborder="0" allowfullscreen></iframe>
+
 <h2 id="composer">Установка через Composer</h2>
 <blockquote>
 <p>Для развертывания Юпи! вам понадобится <a href="https://getcomposer.org/">Composer</a> и <a href="http://git-scm.com/downloads">Git</a>.
@@ -325,13 +376,39 @@
 </ul>
 <p>Теперь можно переходить к установке Юпи!</p>
 <h2 id="_2">Установка из архива</h2>
-<p>Как правило, виртуальные хостинги не предоставляют возможности воспользоваться предыдущими способами установки. Если вы оказались в такой ситуации, то можете <a href="http://yupe-project.ru/download">скачать</a> полный архив Юпи! со всеми установленными зависимостями. Вам нужно только его распаковать и переходить к следующему шагу.</p>
+<p>Последнюю версию Юпи! всегда можно скачать со <a href="http://yupe.ru/download">страницы загрузки</a>.</p>
 <p>Преимущества установки из архива:</p>
 <ul>
-<li>единственный вариант для виртуальных хостингов без ssh-доступа - все необходимые файлы уже собраны и готовы к установке</li>
+<li>вы получаете самую последнюю версию</li>
+<li>все необходимые файлы уже собраны и готовы к установке</li>
+<li>вам не потребуется ничего кроме ftp-доступа к хостингу</li>
 </ul>
-<p>Если при подготовке к установке у вас возникли какие-то проблемы - посетите <a href="http://yupe.ru/talk/viewforum.php?f=10">специальную ветку нашего форума</a> или <a href="http://yupe-project.ru/contacts">напишите нам</a></p>
-<h2 id="_3">Установка Юпи!</h2>
+<div class="admonition note">
+<p class="admonition-title">Обратите внимание!</p>
+<p>Если при подготовке к установке у вас возникли какие-то проблемы - посетите <a href="http://talk.yupe.ru/viewforum.php?f=10">специальную ветку нашего форума</a> или <a href="http://yupe.ru/contacts">напишите нам</a>.</p>
+</div>
+<p>Последовательность действий:</p>
+<ul>
+<li><a href="http://yupe.ru/download">скачиваем</a> дистрибутив</li>
+<li>загружаем на <a href="http://yupe.ru/service/hosting">хостинг</a></li>
+<li>подготавливаем хостинг</li>
+<li>запускаем мастер установки</li>
+</ul>
+<p>В загруженном архиве вы обнаружите следующую структуру директорий:</p>
+<pre><code>.
+├── protected
+├── public // именно на этот каталог должен смотреть корень вашего сайта
+├── read.me
+└── tests
+├── themes
+└── vendor
+</code></pre>
+
+<div class="admonition danger">
+<p class="admonition-title">Важно!</p>
+<p>Обратите внимание, что корень сайта должен быть настроен на каталог public. Именно в public находится index.php, требуемый для работы сайта.</p>
+</div>
+<h2 id="_3">Мастер установки Юпи!</h2>
 <p>Чтобы проверить, что все сделано правильно, введите в браузере адрес своего сайта. Вы увидите экран приветствия инсталлятора Юпи!, на котором будет предложено выбрать язык установки.</p>
 <p><img alt="Установка: шаг 1" src="../img/yupe-install-1.png" /></p>
 <p><strong>Шаг 2</strong>: Проверка окружения</p>
@@ -394,8 +471,13 @@
 <p><img alt="Установка: шаг 7" src="../img/yupe-install-7.png" /></p>
 <p><strong>Шаг 8</strong>: Окончание установки</p>
 <p>Надеемся, что все прошло хорошо и вас можно поздравить с успешной установкой Юпи!</p>
-<p>Если что-то пошло не так - посетите <a href="http://yupe.ru/talk/viewforum.php?f=10">специальную ветку нашего форума</a> или <a href="http://yupe-project.ru/contacts">напишите нам</a></p>
+<p>Если что-то пошло не так - посетите <a href="http://talk.yupe.ru/viewforum.php?f=10">специальную ветку нашего форума</a> или <a href="http://yupe.ru/contacts">напишите нам</a></p>
 <p><img alt="Установка: шаг 8" src="../img/yupe-install-8.png" /></p>
+<div class="admonition important">
+<p class="admonition-title">Придем на помощь!</p>
+<p>Наши специалисты могут помочь вам <a href='http://yupe.ru/store/services/install.html' target='_blank'>установить</a> платформу на выбранный хостинг
+или произвести полную <a href='http://yupe.ru/store/services/server.html' target='_blank'>настройку сервера</a> - пожалуйста, обращайтесь!</p>
+</div>
               
             </div>
           </div>
@@ -406,7 +488,7 @@
         <a href="../update/" class="btn btn-neutral float-right" title="Обновление"/>Далее <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../intro/" class="btn btn-neutral" title="Введение"><span class="icon icon-circle-arrow-left"></span> Назад</a>
+        <a href="../hosting/" class="btn btn-neutral" title="Системные требования"><span class="icon icon-circle-arrow-left"></span> Назад</a>
       
     </div>
   
@@ -434,7 +516,7 @@
           <a class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../intro/" style="color: #fcfcfc;">&laquo; Назад</a></span>
+        <span><a href="../hosting/" style="color: #fcfcfc;">&laquo; Назад</a></span>
       
       
         <span style="margin-left: 15px"><a href="../update/" style="color: #fcfcfc">Далее &raquo;</a></span>

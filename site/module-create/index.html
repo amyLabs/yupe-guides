@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Создание модуля - Юпи!</title>
+  
+
+  <link rel="shortcut icon" href="../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Создание модуля";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-61725465-4', 'docs.yupe.ru');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Юпи!</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Поиск по документации" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <ul class="subnav">
+    <li><span>О проекте</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="..">Начало</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../intro/">Знакомство с Yii</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../assistance.project/">Помощь проекту</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../team/">Команда</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../how/">Как сделать ?</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Введение</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../hosting/">Системные требования</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../install/">Установка</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../update/">Обновление</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Модули</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../modules/">Обзор модулей</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Создание модуля</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#_1">Создание собственного модуля</a></li>
+                
+                    <li><a class="toctree-l4" href="#_2">Введение</a></li>
+                
+                    <li><a class="toctree-l4" href="#_3">Описание модуля</a></li>
+                
+                    <li><a class="toctree-l4" href="#_5">Каркас модуля</a></li>
+                
+                    <li><a class="toctree-l4" href="#_6">Миграции</a></li>
+                
+                    <li><a class="toctree-l4" href="#_7">Модель</a></li>
+                
+                    <li><a class="toctree-l4" href="#_8">Отображение списка задач и фильтрация</a></li>
+                
+                    <li><a class="toctree-l4" href="#_9">Добавление/изменение/удаление задач</a></li>
+                
+                    <li><a class="toctree-l4" href="#_10">Статусы</a></li>
+                
+                    <li><a class="toctree-l4" href="#dragdrop">Сортировка перетаскиванием (drag&amp;drop)</a></li>
+                
+                    <li><a class="toctree-l4" href="#_11">Уведомление о невыполненных задачах в панели управления</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../settings/">Настройки сайта</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Разработчику</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../migrator.index/">Мигратор</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../config.manager/">Управление конфигами</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../atomfeed/">Генерация Atom-ленты</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../cwebuser.issues/">Проблемы CWebUser и модуля Gii</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../events/">Работа с событиями</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../zend.search/">Модуль поиска на основе Zend Lucene</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../testing/">Тестирование</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../apc.options/">Оптимальные настройки APC</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../editors.eclipse/">Работа с eclipse</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../memcached/">Конфигурация Memcahed</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../ubuntu/">Установка на Linux</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../userspace.config/">Конфигурация модулей с настройками пользователей</a>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Юпи!</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Документация</a> &raquo;</li>
+    
+      
+        
+          <li>Модули &raquo;</li>
+        
+      
+    
+    <li>Создание модуля</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/amyLabs/yupe-guides" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="_1">Создание собственного модуля</h1>
+<h2 id="_2">Введение</h2>
+<p>Команда Юпи! активно развивает систему и внедряет новые возможности, но надо признать, что мы не всесильны и не можем удовлетворить потребностей всех пользователей. В этой главе мы постараемся максимально подробно осветить вопрос создания собственных модулей для Юпи!, чтобы вы могли самостоятельно улучшить свой проект или может даже разместить модуль в нашем <a href="http://yupe.ru/marketplace">Маркете</a>.</p>
+<div class="admonition danger">
+<p class="admonition-title">Важно!</p>
+<p>Если вы не знакомы с фреймворком <a href="http://www.yiiframework.com/doc/guide/1.1/ru/quickstart.what-is-yii">Yii</a>, то для более легкого понимания материала, рекомендую вам ознакомиться с шаблоном проектирования <a href="http://www.yiiframework.com/doc/guide/1.1/ru/basics.mvc">MVC</a>, <a href="http://www.yiiframework.com/doc/guide/1.1/ru/basics.module">модулями</a> фреймворка, а еще лучше - изучить учебное пособие по <a href="http://www.yiiframework.com/doc/blog/1.1/ru">созданию блога</a>.</p>
+</div>
+<h2 id="_3">Описание модуля</h2>
+<p>Поскольку нашей задачей является обучение, а не изобретение чего-то нового и интересного, то мы будем создавать простенький модуль задач "ToDo". Думаю, для наших целей этого будет достаточно.
+Дабы не усложнять процесс, сделаем допущение, что в системе может быть зарегистрирован только один пользователь. Это позволит нам не разделять списки задач. В качестве домашнего задания вы можете реализовать эту возможность самостоятельно.</p>
+<p>Все этапы разработки будут оформлены в отдельные коммиты, которые вы сможете посмотреть на <a href="https://github.com/sabian/yupe-todo">GitHub</a>.
+Возникшие вопросы можно задать на нашем <a href="https://talk.yupe.ru">форуме</a>.</p>
+<h5 id="_4">Список требований:</h5>
+<ul>
+<li>должна быть возможность создавать, редактировать и удалять задачи;</li>
+<li>реализовать поиск по задачам и фильтрацию по статусу;</li>
+<li>inline-редактирование статусов задач;</li>
+<li>изменение приоритета задач перетаскиванием мышью (drag&amp;drop);</li>
+<li>на главной странице панели управления отображать уведомления о количестве невыполненных задач.</li>
+</ul>
+<p>Да, можно сделать всё гораздо проще, но нам бы хотелось охватить как можно больше различных аспектов создания модуля.</p>
+<h2 id="_5">Каркас модуля</h2>
+<p>Сначала нужно создать минимально возможную структуру модуля, для того, чтобы можно было включить его в панели управления и визуально наблюдать изменения в процессе его создания. </p>
+<div class="admonition note">
+<p class="admonition-title">Обратите внимание!</p>
+<p>Для большего понимания материала, мы не будем использовать генератор кода (Gii), а создадим каждый файл и директорию вручную. Конечно, в будущем вы можете использовать его для упрощения работы. Прочитать как это сделать, можно <a href="http://www.yiiframework.com/doc/guide/1.1/ru/topics.gii">здесь</a>.</p>
+</div>
+<p>Дальнейшие действия подразумевают, что у вас установлена последняя стабильная версия Юпи! и открыт любимый редактор кода с добавленными в проект файлами системы.</p>
+<p>В <code>protected/modules</code> создаем директорию <code>todo</code> для нашего модуля. Все дальнейшие действия будут проводиться внутри этой категории. </p>
+<p>Создаем основной файл модуля <code>TodoModule.php</code> с одноименным классом, расширяющим компонент <code>WebModule</code> модуля <code>yupe</code>.</p>
+<pre><code class="php">use yupe\components\WebModule;
+
+class TodoModule extends WebModule 
+{
+
+}
+</code></pre>
+
+<p>И добавляем в него методы:</p>
+<p><strong>getDependencies</strong> - возвращает массив модулей, от которых будет зависеть наш модуль. Допустим, если бы мы хотели добавить комментарии к нашим задачам и возможность добавления изображений, то нужно было бы написать так:</p>
+<pre><code class="php">return ['image', 'comment'];
+</code></pre>
+
+<p>Наш модуль вполне самостоятелен, поэтому мы вернем пустой массив.</p>
+<p><strong>getVersion</strong> - возвращает версию вашего модуля для отображения в панели управления.</p>
+<p><strong>getCategory</strong> - сообщает системе в какой вкладке меню, панели управления, отображать меню нашего модуля. Т.е., если мы хотим разместить его в меню "Контент", то так и напишем:</p>
+<pre><code class="php">return 'Контент';
+</code></pre>
+
+<p><strong>getName</strong> - возвращает название модуля.</p>
+<p><strong>getDescription</strong> - краткое описание модуля.</p>
+<p><strong>getAuthor</strong> - имя автора или компании, создавшей модуль.</p>
+<p><strong>getAuthorEmail</strong> - email-адрес.</p>
+<p><strong>getUrl</strong> - ссылка на сайт автора или на демонстрационный сайт.</p>
+<p><strong>getIcon</strong> - иконка модуля. Указывается в формате <code>fa fa-fw &lt;название&gt;</code>. Выбрать подходящую иконку и узнать ее название можно на сайте <a href="https://fortawesome.github.io/Font-Awesome/icons/">FontAwesome</a>. В этом модуле используем иконку <a href="http://fortawesome.github.io/Font-Awesome/icon/thumb-tack/">thumb-tack</a>, значит метод должен вернуть строку <code>fa fa-fw fa-thumb-tack</code>.</p>
+<p><strong>getAdminPageLink</strong> - здесь указывается ссылка на какую-либо страницу (чаще главную) модуля. Она нужна для отображения кнопки модуля на главной странице панели управления. Строится она по следующему правилу: <code>/&lt;название модуля&gt;/&lt;название контроллера&gt;/&lt;действие&gt;</code>. Для модуля она примет такой вид: <code>/todo/todoBackend/index</code>.</p>
+<p><strong>getNavigation</strong> - сообщает системе о структуре меню модуля. Он крайне простой, поэтому сделаем только два пункта: просмотр списка задач и создание задачи.</p>
+<pre><code class="php">return [
+    [
+        'icon'  =&gt; 'fa fa-fw fa-list-alt',
+        'label' =&gt; 'Список задач',
+        'url'   =&gt; ['/todo/todoBackend/index']
+    ],
+    [
+        'icon'  =&gt; 'fa fa-fw fa-plus-square',
+        'label' =&gt; 'Создать задачу',
+        'url'   =&gt; ['/todo/todoBackend/create']
+    ],
+];
+</code></pre>
+
+<p>Эти данные будут использованы для генерации главного меню панели управления.</p>
+<p>Осталось создать еще один файл и мы сможем установить модуль, чтобы потом, добавляя функционал, можно было наблюдать за изменениями в панели управления.</p>
+<p>Создаем директорию <code>install</code>, в которой размещаем файл с точно таким же названием, как и модуль - <code>todo.php</code>. В нем будет храниться конфигурация модуля, где, для начала, мы просто сообщим системе о его существовании:</p>
+<pre><code class="php">return [
+    'module'    =&gt; [
+        'class' =&gt; 'application.modules.todo.TodoModule',
+    ],
+];
+</code></pre>
+
+<p>Строчка <code>application.modules.todo.TodoModule</code> - это путь до главного класса модуля, где <code>application</code> указывает на директорию <code>protected</code>. </p>
+<p>Вот и все! Если все сделано правильно, то в разделе "Модули", во вкладке "Не установлен!", мы должны увидеть наш модуль.
+<img alt="Модуль ToDo" src="../img/yupe-module-1.png" /></p>
+<p>После установки модуля вы должны увидеть пункт "ToDo" в главном меню и кнопку на главной странице панели управления.
+<img alt="Установленный модуль ToDo" src="../img/yupe-module-2.png" /></p>
+<p>И, хотя в нем еще ничего не отображается, кроме названия и меню модуля, а впереди нас ждет еще уйма работы, я думаю, можно вас поздравить с этим маленьким, но очень важным шагом.</p>
+<p>Детально изучить созданные файлы вы можете в <a href="https://github.com/sabian/yupe-todo/commit/4ee5d8b316279d2c27c5a536b7fd4033be94db01">этом коммите на GitHub</a>. А если возникли вопросы, то смело задавайте их на нашем <a href="https://talk.yupe.ru">форуме</a>. Будем рады помочь!</p>
+<h2 id="_6">Миграции</h2>
+<p>Теперь пришло время задуматься над структурой таблицы модуля и создании миграции. О том, что такое миграции, для чего они нужны и как с ними работать, вы можете прочитать в <a href="http://www.yiiframework.com/doc/guide/1.1/ru/database.migration">официальном руководстве</a>.</p>
+<p>В модулях Юпи! файлы миграций хранятся в директории <code>install/migrations</code>. Перед тем как продолжать, убедитесь, что вы ее создали.</p>
+<p>Далее, в консоли, находясь в корневой папке вашего проекта, выполняем команду <code>php protected/yiic migrate create todo yupe_todo_table</code>. Этой командой мы создаем файл миграции <code>yupe_todo_table</code> для модуля <code>todo</code>. </p>
+<p>Если все прошло хорошо, то на данный момент у вас должна быть следующая структура директорий:</p>
+<pre><code>.
+├── install
+│   ├── migrations
+│   │   └── m151205_141508_yupe_todo_table.php
+│   └── todo.php
+├── LICENSE
+├── README.md
+└── TodoModule.php
+</code></pre>
+
+<p>Теперь, в созданном файле, нужно описать поля таблицы для хранения задач. 
+Согласно, описанным выше, требованиям к модулю, у задачи должно быть описание, статус и сортировка.</p>
+<pre><code class="php">class m151205_141508_yupe_todo_table extends yupe\components\DbMigration
+{
+    public function safeUp()
+    {
+        $this-&gt;createTable('{{todo}}', [
+            'id' =&gt; 'pk',
+            'description' =&gt; 'string NOT NULL',
+            'status' =&gt; 'TINYINT(1) NOT NULL DEFAULT 1',
+            'sort' =&gt; 'integer NOT NULL DEFAULT 1',
+        ], $this-&gt;getOptions());
+    }
+
+    public function safeDown()
+    {
+        $this-&gt;dropTable('{{todo}}');
+    }
+}
+</code></pre>
+
+<p>Обратите внимание, что название таблицы заключено в двойные фигурные скобки <code>{{todo}}</code>. Это сделано для того, чтобы система автоматически подставила префикс для таблиц, который задается на этапе установки. Если вы ничего не меняли, то после применения миграции в базе данных должна появиться таблица <code>yupe_todo</code>.</p>
+<p>Метод <code>getOptions</code> добавляет параметры таблицы: <code>ENGINE=InnoDB DEFAULT CHARSET=utf8</code></p>
+<p>Осталось только ввести команду <code>php protected/yiic migrate --module=todo</code> и подтвердить что хотите применить миграцию.</p>
+<p>После успешного завершения операции, в базе данных должна появиться таблица со следующей структурой:</p>
+<pre><code>+-------------+--------------+------+-----+---------+----------------+
+| Field       | Type         | Null | Key | Default | Extra          |
++-------------+--------------+------+-----+---------+----------------+
+| id          | int(11)      | NO   | PRI | NULL    | auto_increment |
+| description | varchar(255) | NO   |     | NULL    |                |
+| status      | tinyint(1)   | NO   |     | 1       |                |
+| sort        | int(11)      | NO   |     | 1       |                |
++-------------+--------------+------+-----+---------+----------------+
+</code></pre>
+
+<p>Результат на <a href="https://github.com/sabian/yupe-todo/commit/7feff834d603f30d86debccd151738145243455e">GitHub</a></p>
+<h2 id="_7">Модель</h2>
+<p>Учитывая, что официальное руководство по Yii фреймворку предоставляет исчерпывающую информацию о <a href="http://www.yiiframework.com/doc/guide/1.1/ru/basics.model">моделях</a>, их <a href="http://www.yiiframework.com/doc/guide/1.1/ru/form.model">создании</a> и <a href="http://www.yiiframework.com/doc/guide/1.1/ru/database.overview">работе с базой данных</a>, лучше сразу перейти к делу.</p>
+<p>В Юпи! есть базовый класс <code>YModel</code>, от которого должны быть унаследованы все модели. Исходя из этого, определяем класс:</p>
+<pre><code class="php">use yupe\models\YModel;
+
+class Todo extends YModel
+{
+
+}
+</code></pre>
+
+<p>На этом этапе понадобится переопределить только три метода:
+- <strong>tableName</strong> - возвращает название таблицы в базе данных. Здесь все просто, это будет строка <code>{{todo}}</code>;
+- <strong>rules</strong> - правила валидации данных;
+- <strong>attributeLabels</strong> - возвращает список меток аттрибутов в формате <code>'Атрибут' =&gt; 'Описание'</code>.</p>
+<p>Все остальное будем дописывать при первой необходимости.</p>
+<p>Посмотреть на получившийся код вы можете в соответствующем коммите на GitHub, ссылка на который указана в конце этого раздела.
+А пока опишем требования для правил валидации:
+- поле <code>description</code> должно быть обязательным и иметь длину не более 255 символов;
+- поля <code>status</code> и <code>sort</code> должны быть целочисленными.</p>
+<pre><code class="php">['description', 'required'],
+['description', 'length', 'max' =&gt; 255],
+['status, sort', 'numerical', 'integerOnly' =&gt; true],
+</code></pre>
+
+<p>Пока это все, что мы можем написать в модели. В дальнейшем придется добавить несколько правил валидации и методов, а пока можно изучить <a href="https://github.com/sabian/yupe-todo/commit/6330d8a7ec06a8dd86976b10514cce34df571ce0">полученный результат</a>.</p>
+<p>Если у вас возникли вопросы по предыдущим шагам руководства, то можете смело задавать их на <a href="https://talk.yupe.ru">форуме</a>. Возможно, это поможет нам дополнить руководство и сделать его более понятным.</p>
+<p>На этом этапе, пожалуй, самым логичным будет создание административной части модуля. Начнем с контроллера.</p>
+<p>В методе <code>getNavigation</code> (файл TodoModule.php) ссылки на пункты меню имеют следующий вид: <code>['/todo/todoBackend/index']</code>. Как уже говорилось ранее, они создаются по принципу <code>/название модуля/название контроллера/действие</code>. Из этого следует, что контроллер должен называться <code>TodoBackendController</code> и располагаться в директории <code>controllers</code>. </p>
+<p>К этому моменту структура директорий модуля должна иметь вид:</p>
+<pre><code>.
+├── controllers
+│   └── TodoBackendController.php
+├── install
+│   ├── migrations
+│   │   └── m151205_141508_yupe_todo_table.php
+│   └── todo.php
+├── LICENSE
+├── models
+│   └── Todo.php
+├── README.md
+└── TodoModule.php
+</code></pre>
+
+<p>Обратите внимание, что контроллер должен наследовать <code>BackController</code>. Также создаем действие <code>index</code> в котором задаем отображение одноименного представления.</p>
+<pre><code class="php">use yupe\components\controllers\BackController;
+
+class TodoBackendController extends BackController
+{
+    public function actionIndex()
+    {
+        $this-&gt;render('index');
+    }
+}
+</code></pre>
+
+<p>Файлы представлений должны находиться в директории <code>views</code>, внутри которой они сортируются по директориям, относящимся к конкретному контроллеру. В данном случае это <code>todoBackend</code>. Создаем файл и оставляем его пока пустым.</p>
+<p>Для тех, кто не уверен, что правильно все понял: размещаем структуру категорий, которая должна быть после создания файла представления.</p>
+<pre><code>.
+├── controllers
+│   └── TodoBackendController.php
+├── install
+│   ├── migrations
+│   │   └── m151205_141508_yupe_todo_table.php
+│   └── todo.php
+├── LICENSE
+├── models
+│   └── Todo.php
+├── README.md
+├── TodoModule.php
+└── views
+    └── todoBackend
+        └── index.php
+</code></pre>
+
+<p>Если все сделано правильно, то при клике на пункте меню <code>Контент - ToDo</code> в панели управления не должно появляться ошибки, как это было ранее. Вы должны увидеть главное меню панели управления, блок с информацией о модуле и пустую контентную область.</p>
+<h2 id="_8">Отображение списка задач и фильтрация</h2>
+<p>Отвечать за отображение списка задач будет виджет <a href="https://github.com/yupe/yupe/blob/master/protected/modules/yupe/widgets/CustomGridView.php">CustomGridView</a>, которому нужен источник данных. Для этого будет использоваться <a href="http://www.yiiframework.com/doc/api/1.1/CActiveDataProvider">CActiveDataProvider</a>.</p>
+<p>Теперь в модели (файл <code>models/Todo.php</code>) необходимо создать метод <code>search</code>, который и будет служить источником данных для отображения и фильтрации задач.</p>
+<pre><code class="php">public function search()
+{
+    $criteria = new CDbCriteria;
+
+    $criteria-&gt;compare('description', $this-&gt;description, true);
+    $criteria-&gt;compare('status', $this-&gt;status);
+
+    return new CActiveDataProvider(get_class($this), [
+        'criteria' =&gt; $criteria,
+        'sort' =&gt; [
+            'defaultOrder' =&gt; 'sort'
+        ]
+    ]);
+}
+</code></pre>
+
+<p>Приведенный выше код не должен вызывать трудностей. Стоит только уделить немного внимания этим двум строкам:</p>
+<pre><code class="php">$criteria-&gt;compare('description', $this-&gt;description, true);
+$criteria-&gt;compare('status', $this-&gt;status);
+</code></pre>
+
+<p>Здесь описываются условия для фильтрации данных, из которых можно понять, что поиск будет осуществляться только по двум полям: <code>description</code> и <code>status</code>. При этом для поля <code>description</code> третьим параметром передается <code>true</code>, что сообщает системе о возможности частичного совпадения фразы.</p>
+<p>Для правильной работы поиска, в правилах валидации (метод <code>rules</code>) необходимо объявить эти поля безопасными для сценария <code>search</code>:</p>
+<pre><code class="php">['description, sort', 'safe', 'on' =&gt; 'search']
+</code></pre>
+
+<p>Теперь нужно изменить контроллер:</p>
+<pre><code class="php">public function actionIndex()
+{
+    // В модели включаем сценарий search
+    $model = new Todo('search');
+
+    // Получаем данные из запроса. 
+    // Если в фильтре ничего не меняли, то в переменной будет null
+    $query = Yii::app()-&gt;getRequest()-&gt;getQuery('Todo');
+
+    $model-&gt;unsetAttributes();
+
+    if ($query) {
+        // Присваиваем атрибутам модели значения из запроса
+        $model-&gt;setAttributes($query);
+    }
+
+    // Передаем модель в представление
+    $this-&gt;render('index', ['model' =&gt; $model]);
+}
+</code></pre>
+
+<p>А в представлении добавить виджет:</p>
+<pre><code class="php">$this-&gt;widget('yupe\widgets\CustomGridView', [
+        'id' =&gt; 'todo-grid',
+        'type' =&gt; 'condensed',
+        'dataProvider' =&gt; $model-&gt;search(),
+        'filter' =&gt; $model,
+        'columns' =&gt; [
+            'id',
+            'description',
+            'status',
+            [
+                'class' =&gt; 'yupe\widgets\CustomButtonColumn',
+                'template' =&gt; '{update} {delete}'
+            ],
+        ],
+    ]
+);
+</code></pre>
+
+<p>Теперь в панели управления вы должны увидеть следующую картину:</p>
+<p><img alt="Модуль ToDo - Список" src="../img/yupe-module-3.png" /></p>
+<p>Обращаем ваше внимание на то, что не весь код размещается в этом описании, а только самые важные его части. Более подробно изучить код этой части можно на <a href="https://github.com/sabian/yupe-todo/commit/f4d2019ff395c625857935a615bb2d2c1815926d">GitHub</a>.</p>
+<h2 id="_9">Добавление/изменение/удаление задач</h2>
+<p>Начнем работу с реализации возможности добавления данных.</p>
+<p>Добавляем в <code>TodoBackendController</code> действие <code>actionCreate</code>:</p>
+<pre><code class="php">public function actionCreate()
+{
+    $model = new Todo();
+
+    if ($data = Yii::app()-&gt;getRequest()-&gt;getPost('Todo')) {
+        // Если форма была отправлена, то присваиваем атрибуты
+        $model-&gt;setAttributes($data);
+
+        if ($model-&gt;save()) {
+            // Показываем пользователю сообщение, если данные успешно сохранены
+            Yii::app()-&gt;user-&gt;setFlash(
+                yupe\widgets\YFlashMessages::SUCCESS_MESSAGE,
+                'Задача успешно добавлена'
+            );
+
+            $this-&gt;redirect(
+                (array)Yii::app()-&gt;getRequest()-&gt;getPost(
+                    'submit-type',
+                    ['create']
+                )
+            );
+        }
+    }
+
+    $this-&gt;render('create', ['model' =&gt; $model]);
+}
+</code></pre>
+
+<p>Теперь нужно создать файл представления, под названием <code>create</code>, в котором будет отображаться форма для ввода данных. </p>
+<p>Поскольку форма будет использоваться как при создании задачи, так и при ее редактировании, то, для избежания дублирования кода, будет логично вынести ее в отдельный файл.</p>
+<pre><code class="php">$this-&gt;renderPartial('_form', ['model' =&gt; $model]);
+</code></pre>
+
+<p>Для удобства навигации по разделам модуля добавим меню в правый сайдбар:</p>
+<pre><code class="php">$this-&gt;menu = [
+    ['icon' =&gt; 'fa fa-fw fa-list-alt', 'label' =&gt; 'Список задач', 'url' =&gt; ['/todo/todoBackend/index']],
+    ['icon' =&gt; 'fa fa-fw fa-plus-square', 'label' =&gt; 'Создать задачу', 'url' =&gt; ['/todo/todoBackend/create']],
+];
+</code></pre>
+
+<p>Отображение формы будет осуществляться виджетом <a href="https://github.com/yupe/yupe/blob/master/protected/modules/yupe/widgets/ActiveForm.php">ActiveForm</a>. Валидация данных будет проводиться на клиентской стороне:</p>
+<pre><code class="php">'enableClientValidation' =&gt; true,
+</code></pre>
+
+<p>Работа со статусами будет добавлена позднее, поэтому сейчас форма содержит только поле "Описание" </p>
+<pre><code class="php">&lt;?= $form-&gt;textFieldGroup($model, 'description'); ?&gt;
+</code></pre>
+
+<p>После добавления нужных файлов у вас должна быть следующая структура директории <code>view</code></p>
+<pre><code>└── views
+    └── todoBackend
+        ├── create.php
+        ├── _form.php
+        └── index.php
+</code></pre>
+
+<p>Весь добавленный код вы можете увидеть в <a href="https://github.com/sabian/yupe-todo/commit/189ca50a797a782f087f6cc704453d9135787916">этом коммите</a>.</p>
+<p>Если вы нигде не ошиблись, то можете попробовать добавить первую задачу. После её сохранения она появится в списке задач.</p>
+<p>Изменение задачи по сути ничем не отличается от ее создания, за исключением того, что нужно получить изменяемые данные. 
+Создадим метод <code>loadModel</code>, который будет выбирать нужную строку из базы данных по первичному ключу, а в случае её отсутствия сообщать об ошибке.</p>
+<pre><code class="php">private function loadModel($id)
+{
+    $model = Todo::model()-&gt;findByPk($id);
+
+    if ($model === null) {
+        throw new CHttpException(404, 'Запрошенная страница не найдена.');
+    }
+
+    return $model;
+}
+</code></pre>
+
+<pre><code class="php">public function actionUpdate($id)
+{
+    // загружаем данные
+    $model = $this-&gt;loadModel($id);
+
+    if ($data = Yii::app()-&gt;getRequest()-&gt;getPost('Todo')) {
+
+        $model-&gt;setAttributes($data);
+
+        if ($model-&gt;update()) {
+            Yii::app()-&gt;user-&gt;setFlash(
+                YFlashMessages::SUCCESS_MESSAGE, 
+                'Задача успешно обновлена'
+            );
+
+            $submitType = Yii::app()-&gt;getRequest()-&gt;getPost('submit-type');
+
+            if (isset($submitType)) {
+                // Если пользователь нажал &quot;Сохранить и закрыть&quot;, 
+                // то отправляем его на главную страницу модуля
+                $this-&gt;redirect([$submitType]);
+            } else {
+                // Иначе остаемся на странице редактирования задачи
+                $this-&gt;redirect(['update', 'id' =&gt; $model-&gt;id]);
+            }
+        }
+    }
+
+    $this-&gt;render('update', ['model' =&gt; $model]);
+}
+</code></pre>
+
+<p>Далее создаем файл представления <code>update</code>, который будет отличаться от <code>create</code> только названиями заголовков и "хлебными крошками". Попробуйте самостоятельно сделать этот файл. Подсмотреть решение можно <a href="https://github.com/sabian/yupe-todo/commit/2157ef21c754c40b562aa64bef59a4b96c93587b">здесь</a>.</p>
+<p>Для завершения этой части работ осталось только реализовать обработку удаления задачи.</p>
+<p>Следует отметить, что групповое удаление записей <a href="https://github.com/yupe/yupe/blob/master/protected/modules/yupe/components/controllers/BackController.php#L123">реализовано</a> в контроллере <code>BackController</code>, свойства и методы которого наследует контроллер модуля <code>TodoBackendController</code>, так что дополнительной реализации не требуется.</p>
+<p>В первую очередь создаем фильтр, который будет запрещать обращение к методу <code>actionDelete</code> напрямую и разрешать его только через POST запрос:</p>
+<pre><code class="php">public function filters()
+{
+    return CMap::mergeArray(
+        parent::filters(),
+        [
+            'postOnly + delete',
+        ]
+    );
+}
+</code></pre>
+
+<p><em>Обратите внимание на объединение двух массивов: родительского и фильтров текущего контроллера. Про это не стоит забывать, т.к. в родительском классе определяется фильтр, ограничивающий доступ к административной части вашего модуля.</em></p>
+<p>Далее реализуем удаление:</p>
+<pre><code class="php">public function actionDelete($id)
+{
+    if ($this-&gt;loadModel($id)-&gt;delete()) {
+        Yii::app()-&gt;user-&gt;setFlash(
+            YFlashMessages::SUCCESS_MESSAGE, 
+            'Задача успешно удалена'
+        );
+
+        if (!Yii::app()-&gt;getRequest()-&gt;getParam('ajax')) {
+            $this-&gt;redirect(
+                (array)Yii::app()-&gt;getRequest()-&gt;getPost('returnUrl', 'index')
+            );
+        }
+    }
+}
+</code></pre>
+
+<p>Здесь все очень просто и не требует дополнительных пояснений.</p>
+<p>Работа над основными действиями закончена. Теперь вы можете добавлять, изменять и удалять задачи. Результат, как всегда, можно посмотреть в соответствующем <a href="https://github.com/sabian/yupe-todo/commit/2157ef21c754c40b562aa64bef59a4b96c93587b">коммите на GitHub</a>, а если возникли вопросы, то можно задать их на <a href="https://talk.yupe.ru">форуме Юпи!</a>.</p>
+<h2 id="_10">Статусы</h2>
+<p>Наверняка вы уже попробовали добавить задачу и увидели: в списке вместо статуса отображается цифра 1, что крайне неинформативно. Также нет возможности редактировать статус. Пора это исправить.</p>
+<p>В корневой директории модуля создаем директорию <code>helpers</code>, в которой будет находиться файл <code>TodoStatusHelper</code>, содержащий названия статусов и методы для работы с ними.</p>
+<p>Чтобы каждый раз не думать о том, какому статусу соответствует та или иная цифра, присвоим их соответствующим константам. Это также упростит редактирование значения статуса при необходимости.</p>
+<pre><code class="php">class TodoStatusHelper
+{
+    const STATUS_CANCELLED = 0;
+    const STATUS_DEFAULT = 1;
+    const STATUS_URGENT = 2;
+    const STATUS_DONE = 3;
+}
+</code></pre>
+
+<p>Предлагаем ограничиться четырьмя статусами: Отменена, Обычная, Срочная, Выполнена. При необходимости вы можете самостоятельно расширить этот список.</p>
+<p>Также понадобятся методы для получения списка статусов и получения названия статуса по его номеру.</p>
+<pre><code class="php">public static function getList()
+{
+    return [
+        self::STATUS_CANCELLED =&gt; 'Отменена',
+        self::STATUS_DEFAULT =&gt; 'Обычная',
+        self::STATUS_URGENT =&gt; 'Срочная',
+        self::STATUS_DONE =&gt; 'Выполнена',
+    ];
+}
+
+public static function getLabel($id)
+{
+    $list = self::getList();
+
+    return $list[$id];
+}
+</code></pre>
+
+<p>Чтобы класс хелпера был доступен для дальнейшего использования, необходимо добавить в конфигурационный файл модуля (<code>install/todo.php</code>) следующие строки:</p>
+<pre><code class="php">'import' =&gt; [
+    'application.modules.todo.helpers.*',
+],
+</code></pre>
+
+<p>После чего нужно обновить конфигурацию модуля. Это можно сделать в панели управления, кликнув на специальный значок, который появится на кнопке модуля:</p>
+<p><img alt="Модуль ToDo. Обновление конфигурации" src="../img/yupe-module-4.png" /></p>
+<p>или выполнив консольную команду: <code>php protected/yiic yupe updateConfig</code></p>
+<p>Подготовительные работы закончены, теперь пора отобразить название статусов в списке задач. Для этого в файле <code>views/todoBackend/index.php</code> значение <code>status</code> массива <code>columns</code> заменяем на нижеследующий код:</p>
+<pre><code class="php">[
+    'name' =&gt; 'status',
+    'value' =&gt; function (Todo $data) {
+        return TodoStatusHelper::getLabel($data-&gt;status);
+    }
+],
+</code></pre>
+
+<p>Теперь вместо непонятной цифры у вас должно отображаться название статуса</p>
+<p><img alt="Модуль ToDo. Название статуса" src="../img/yupe-module-5.png" /></p>
+<p>Для удобства фильтрации задач по статусу сделаем выпадающий список</p>
+<pre><code class="php">'filter' =&gt; CHtml::activeDropDownList($model, 'status', TodoStatusHelper::getList(), [
+    'encode' =&gt; false, 
+    'empty' =&gt; '', 
+    'class' =&gt; 'form-control',
+]),
+</code></pre>
+
+<p><img alt="Модуль ToDo. Выпадающий список для фильтра" src="../img/yupe-module-6.png" /></p>
+<p>Согласитесь, стало гораздо удобней!</p>
+<p>Далее реализуем возможность смены статуса задачи через форму редактирования. Для этого изменим файл <code>views/todoBackend/_form.php</code>, где вместо кода</p>
+<pre><code class="php">&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-sm-12&quot;&gt;
+        &lt;?= $form-&gt;textFieldGroup($model, 'description'); ?&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>поставим следующий</p>
+<pre><code class="php">&lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;col-sm-8&quot;&gt;
+        &lt;?= $form-&gt;textFieldGroup($model, 'description'); ?&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;col-sm-4&quot;&gt;
+        &lt;?= $form-&gt;dropDownListGroup($model, 'status', [
+            'widgetOptions' =&gt; [
+                'data' =&gt; TodoStatusHelper::getList(),
+            ],
+        ]); ?&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<p>Теперь, зайдя в редактирование или добавление задачи, рядом с текстовым полем вы увидите выпадающий список с названиями статусов.</p>
+<p>Наберитесь терпения, остались последние штрихи и со статусами будет покончено. Нам осталось сделать inline-редактирование статуса, т.е. дать возможность пользователю поменять статус задачи прямо из списка, не заходя в форму редактирования.</p>
+<p>В Юпи! это сделать не просто, а очень просто! Реализуем в классе <code>TodoBackendController</code> метод <code>actions</code></p>
+<pre><code class="php">public function actions()
+{
+    return [
+        'inline' =&gt; [
+            'class' =&gt; 'yupe\components\actions\YInLineEditAction',
+            'model' =&gt; 'Todo',
+            'validAttributes' =&gt; [
+                'status',
+            ]
+        ],
+    ];
+}
+</code></pre>
+
+<p>Здесь вы сообщаете системе, что в этом классе будет еще одно действие (<code>inline</code>), доступное по адресу <code>/todo/todoBackend/inline</code>. Такой подход позволяет избежать ненужного дублирования кода и упростить его изменение. </p>
+<p>Значение ключа <code>class</code> указывает на класс, ответственный за обработку данного действия. Т.е. вам не нужно каждый раз создавать метод <code>actionInline</code> и копировать в него один и тот же код. Представьте насколько усложнилась бы ваша жизнь, если вам пришлось вносить небольшое изменение в работу этого метода, а их у вас было бы 100. В данном случае вам нужно отредактировать только один файл.</p>
+<p>Значение ключа <code>model</code> содержит название модели, которая будет отвечать за обработку данных, а в <code>validAttributes</code> хранятся названия полей,
+ доступных для редактирования.</p>
+<p>Осталось заменить код колонки <code>status</code> в файле <code>views/todoBackend/index.php</code> на следующий:</p>
+<pre><code class="php">[
+    'name' =&gt; 'status',
+    'class' =&gt; 'yupe\widgets\EditableStatusColumn',
+    'url' =&gt; $this-&gt;createUrl('/todo/todoBackend/inline'),
+    'source' =&gt; TodoStatusHelper::getList(),
+    'filter' =&gt; CHtml::activeDropDownList($model, 'status', TodoStatusHelper::getList(), [
+        'encode' =&gt; false,
+        'empty' =&gt; '',
+        'class' =&gt; 'form-control',
+    ]),
+],
+</code></pre>
+
+<p>А теперь можно насладиться результатом:</p>
+<p><img alt="Модуль ToDo. Inline-редактирование" src="../img/yupe-module-7.gif" /></p>
+<p>Напоследок предлагаем сделать цветовое кодирование статусов, чтобы их было проще различать. Для этого в класс хелпера добавляем новый метод:</p>
+<pre><code class="php">public static function getStylesList()
+{
+    return [
+        self::STATUS_CANCELLED =&gt; ['class' =&gt; 'label-danger'],
+        self::STATUS_DEFAULT =&gt; ['class' =&gt; 'label-default'],
+        self::STATUS_URGENT =&gt; ['class' =&gt; 'label-primary'],
+        self::STATUS_DONE =&gt; ['class' =&gt; 'label-success'],
+    ];
+}
+</code></pre>
+
+<p>В нем каждому статусу присваивается свое <a href="http://getbootstrap.com/components/#labels">название класса</a> метки. И добавляем строку <code>'options' =&gt; TodoStatusHelper::getStylesList(),</code> в описание колонки <code>status</code> в файле <code>views/todoBackend/index.php</code> </p>
+<p><img alt="Модуль ToDo. Цветные метки статусов" src="../img/yupe-module-8.png" /></p>
+<p>Код этой части модуля доступен по <a href="https://github.com/sabian/yupe-todo/commit/3f4478ab1e79f704ec59f9316573a0fb8eed1745">ссылке</a>. Если у вас возникли вопросы, можете смело задавать их на нашем <a href="https://talk.yupe.ru">форуме</a>.</p>
+<h2 id="dragdrop">Сортировка перетаскиванием (drag&amp;drop)</h2>
+<p>В модуле нет необходимости делать сортировку, т.к. приоритеты задач определяются статусами. Но, поскольку он создается в учебных целях, то предлагаем реализовать эту возможность.</p>
+<p>В метод <code>actions</code> файла <code>TodoBackendController</code> добавляем определение действия <code>sortable</code>:</p>
+<pre><code class="php">'sortable' =&gt; [
+    'class' =&gt; 'yupe\components\actions\SortAction',
+    'model' =&gt; 'Todo',
+    'attribute' =&gt; 'sort'
+]
+</code></pre>
+
+<p>Поле <code>sort</code>, в котором будет храниться порядок сортировки записей, мы уже создали в разделе Миграции. Обратите внимание, что для корректной работы сортировки значение по умолчанию должно быть 1 (<code>NOT NULL DEFAULT 1</code>).</p>
+<p>В класс модели <code>Todo</code> добавляем метод <code>beforeSave</code>, который задает порядок сортировки для новых записей:</p>
+<pre><code class="php">protected function beforeSave()
+{
+    if ($this-&gt;isNewRecord) {
+        $this-&gt;sort = Yii::app()-&gt;db-&gt;createCommand()
+            -&gt;select('MAX(sort) + 1')
+            -&gt;from($this-&gt;tableName())
+            -&gt;queryScalar();
+    }
+
+    return parent::beforeSave();
+}
+</code></pre>
+
+<p>Следующие строки добавляем к параметрам виджета <code>CustomGridView</code> в файле <code>views/todoBackend/index.php</code>:</p>
+<pre><code class="php">'sortableRows' =&gt; true,
+'sortableAjaxSave' =&gt; true,
+'sortableAttribute' =&gt; 'sort',
+'sortableAction' =&gt; '/todo/todoBackend/sortable',
+</code></pre>
+
+<p>Это всё! <a href="https://github.com/sabian/yupe-todo/commit/ee46a97aaaee031bf8d27ffc76a2fd8214ddfcc1">Вот так просто</a>, вы можете реализовать drag&amp;drop сортировку записей в вашем модуле для CMS Юпи!</p>
+<p><img alt="Модуль ToDo. D&amp;D сортировка" src="../img/yupe-module-9.gif" /></p>
+<h2 id="_11">Уведомление о невыполненных задачах в панели управления</h2>
+<p>Согласно списку требований, в административной части модуля осталось реализовать уведомление о невыполненных задачах.</p>
+<p>Реализацию начнем с создания метода <code>checkUnfinished</code> в классе <code>Todo</code>:</p>
+<pre><code class="php">public function countUnfinished()
+{
+    return self::model()-&gt;count(
+        'status != :status', 
+        [':status' =&gt; TodoStatusHelper::STATUS_DONE]
+    );
+}
+</code></pre>
+
+<p>Здесь все очень просто: метод возвращает количество записей в базе, у которых статус не равен "Выполнено".</p>
+<p>А в класс <code>TodoModule</code> добавляем следующий код:</p>
+<pre><code class="php">public function checkSelf()
+{
+    $messages = [];
+    $count = Todo::model()-&gt;countUnfinished();
+
+    if(!$count) {
+        return false;
+    }
+
+    $messages[WebModule::CHECK_NOTICE][] = [
+        'type' =&gt; WebModule::CHECK_NOTICE,
+        'message' =&gt; CHtml::link('Невыполненных задач - ' . $count, ['/todo/todoBackend/index']),
+    ];
+
+    return $messages;
+}
+</code></pre>
+
+<p>Метод <code>checkSelf</code> будет вызываться всякий раз, когда вы будете заходить в панель управления. Уведомления будут показываться на главной странице в одноименном блоке.</p>
+<p>В этом методе мы обращаемся к ранее созданному <code>countUnfinished</code>. Если значение переменной <code>$count</code> больше ноля, то метод возвращает массив, содержащий сообщение со ссылкой на главную страницу модуля. Впоследствии массивы сообщений всех модулей сливаются в один и выводятся на экран.</p>
+<p><img alt="Модуль ToDo. Уведомления." src="../img/yupe-module-10.png" /></p>
+<p><a href="https://github.com/sabian/yupe-todo/commit/39d5032b30ddf6229c506a2787983ff25cf501ae">Код раздела на GitHub</a></p>
+<p>На этом работу над модулем можно считать завершенной. Изложенного выше материала должно хватить для понимания базовых принципов создания модулей для CMS Юпи! 
+Поскольку административная часть модуля отличается от клиентской лишь названием контроллеров, то, в качестве практики, мы предлагаем вам самостоятельно реализовать отдельную страницу для отображения открытых задач на вашем тестовом сайте. При желании вы можете пойти дальше и расширить функциональность модуля или начать писать свой собственный.</p>
+<p>В директории <code>protected/modules</code> содержится множество готовых модулей, в которых вы можете посмотреть примеры реализаций необходимого вам функционала.</p>
+<p>С возникшими вопросами ждем вас <a href="http://talk.yupe.ru/">на форуме Юпи! CMS</a></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../settings/" class="btn btn-neutral float-right" title="Настройки сайта"/>Далее <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../modules/" class="btn btn-neutral" title="Обзор модулей"><span class="icon icon-circle-arrow-left"></span> Назад</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+          <a class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
+      
+      
+        <span><a href="../modules/" style="color: #fcfcfc;">&laquo; Назад</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../settings/" style="color: #fcfcfc">Далее &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

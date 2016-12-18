@@ -66,7 +66,21 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="..">Возможности</a>
+        <a class="" href="..">Начало</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../intro/">Знакомство с Yii</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../assistance.project/">Помощь проекту</a>
         
     </li>
 
@@ -78,35 +92,65 @@
     </li>
 
         
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../how/">Как сделать ?</a>
+        
+    </li>
+
+        
     </ul>
 <li>
           
             <li>
+    <ul class="subnav">
+    <li><span>Введение</span></li>
+
+        
+            
     <li class="toctree-l1 ">
-        <a class="" href="../intro/">Введение</a>
+        <a class="" href="../hosting/">Системные требования</a>
         
     </li>
-<li>
-          
-            <li>
+
+        
+            
     <li class="toctree-l1 ">
         <a class="" href="../install/">Установка</a>
         
     </li>
-<li>
-          
-            <li>
+
+        
+            
     <li class="toctree-l1 ">
         <a class="" href="../update/">Обновление</a>
         
     </li>
+
+        
+    </ul>
 <li>
           
             <li>
+    <ul class="subnav">
+    <li><span>Модули</span></li>
+
+        
+            
     <li class="toctree-l1 ">
         <a class="" href="../modules/">Обзор модулей</a>
         
     </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../module-create/">Создание модуля</a>
+        
+    </li>
+
+        
+    </ul>
 <li>
           
             <li>
@@ -117,15 +161,8 @@
 <li>
           
             <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../assistance.project/">Помощь проекту</a>
-        
-    </li>
-<li>
-          
-            <li>
     <ul class="subnav">
-    <li><span>Компоненты</span></li>
+    <li><span>Разработчику</span></li>
 
         
             
@@ -177,12 +214,11 @@
     </li>
 
         
-    </ul>
-<li>
-          
-            <li>
-    <ul class="subnav">
-    <li><span>Настройки</span></li>
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../testing/">Тестирование</a>
+        
+    </li>
 
         
             
@@ -223,13 +259,6 @@
     </ul>
 <li>
           
-            <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../testing/">Тестирование</a>
-        
-    </li>
-<li>
-          
         </ul>
       </div>
       &nbsp;
@@ -252,7 +281,7 @@
     
       
         
-          <li>Компоненты &raquo;</li>
+          <li>Разработчику &raquo;</li>
         
       
     
@@ -271,40 +300,99 @@
             <div class="section">
               
                 <h1 id="zend-lucene">Модуль поиска на основе Zend Lucene</h1>
-<p>Установка:</p>
+<p>Использование:</p>
 <ul>
-<li>Распаковать в модули Юпи!</li>
-<li>Включить модуль в админке сайта</li>
 <li>Открыть файл /protected/config/modules/zendsearch.php</li>
 <li>В нем есть описание переменной searchModels:</li>
 </ul>
 <pre><code class="php">
-'searchModels' => array(
-    // индексируем страницы
-    'Page' => array(
-        'path' => 'application.modules.page.models.Page',
-        'titleColumn' => 'title',
-        'linkColumn'    => 'slug',
-        'linkPattern'   => '/page/page/view?slug={slug}',
-        'textColumns' => 'body,title_short,keywords,description',
-   ),
-   // индексируем новости
-   'News' => array(
-        'path' => 'application.modules.news.models.News',
-        'titleColumn' => 'title',
-        'linkColumn'    => 'alias',
-        'linkPattern'   => '/news/news/view?title={alias}',
-        'textColumns' => 'full_text,short_text,keywords,description',
-   ),
-   // индексируем посты
-   'Post' => array(
-         'path' => 'application.modules.blog.models.Post',
-         'titleColumn' => 'title',
-         'linkColumn' => 'slug',
-         'linkPattern' => '/blog/post/view?slug={slug}',
-         'textColumns' => 'slug,title,quote,content',
-   ),
-),
+<?php
+
+return [
+    'module' => [
+        'class' => 'application.modules.zendsearch.ZendSearchModule',
+        'searchModels' => [
+            'News' => [
+                'path' => 'application.modules.news.models.News',
+                'module' => 'news',
+                'titleColumn' => 'title',
+                'linkColumn' => 'slug',
+                'linkPattern' => '/news/news/view?slug={slug}',
+                'textColumns' => 'full_text,short_text,keywords,description,slug',
+                'criteria' => [
+                    'condition' => 'status = :status',
+                    'params' => [
+                        ':status' => 1
+                    ],
+                ],
+            ],
+            'Page' => [
+                'path' => 'application.modules.page.models.Page',
+                'module' => 'page',
+                'titleColumn' => 'title',
+                'linkColumn' => 'slug',
+                'linkPattern' => '/page/page/view?slug={slug}',
+                'textColumns' => 'body,title_short,keywords,description,slug',
+                'criteria' => [
+                    'condition' => 'status = :status',
+                    'params' => [
+                        ':status' => 1
+                    ],
+                ],
+            ],
+            'Blog' => [
+                'path' => 'application.modules.blog.models.Blog',
+                'module' => 'blog',
+                'titleColumn' => 'name',
+                'linkColumn' => 'slug',
+                'linkPattern' => '/blog/blog/view?slug={slug}',
+                'textColumns' => 'name,description,slug',
+                'criteria' => [
+                    'condition' => 'status = :status',
+                    'params' => [
+                        ':status' => 1
+                    ],
+                ],
+            ],
+            'Post' => [
+                'path' => 'application.modules.blog.models.Post',
+                'module' => 'blog',
+                'titleColumn' => 'title',
+                'linkColumn' => 'slug',
+                'linkPattern' => '/blog/post/view?slug={slug}',
+                'textColumns' => 'title,quote,content,slug',
+                'criteria' => [
+                    'condition' => 'status = :status',
+                    'params' => [
+                        ':status' => 1
+                    ],
+                ],
+            ],
+            'Product' => [
+                'path' => 'application.modules.store.models.Product',
+                'module' => 'store',
+                'titleColumn' => 'name',
+                'linkColumn' => 'slug',
+                'linkPattern' => '/store/product/view?slug={slug}',
+                'textColumns' => 'name,sku,slug,description,meta_title,meta_description,meta_keywords',
+                'criteria' => [
+                    'condition' => 'status = :status',
+                    'params' => [
+                        ':status' => 1
+                    ],
+                ],
+            ],
+        ],
+    ],
+    'import' => [
+        'application.modules.zendsearch.models.*',
+    ],
+    'component' => [],
+    'rules' => [
+        '/search' => 'zendsearch/search/search',
+    ],
+];
+
 </code></pre>
 
 <p>Это описание моделей, которые нужно включить в индекс:</p>
@@ -315,13 +403,19 @@
 <li>linkColumn - поле таблицы, где хранится ссылка на модель</li>
 <li>linkPattern - паттерн ссылки на страницу модели</li>
 <li>textColumns - здесь через запятую нужно перечислить все поля таблицы, которые нужно загнать в индекс Важно! первым нужно указать поле, которое будет выводиться в качестве сниппета для страниц результатов поиска (сниппет формируется путем обрезки текста до 600 знаков, правильнее вывести это значение в свойства модуля, но руки не дошли до этого)</li>
+<li>criteria - Условия фильтрации моделей для индексации</li>
 </ul>
-<p>Далее перейти на страницу модуля <strong>http://site.ru/zendsearch/default/index</strong> и обновить индекс поиска.</p>
-<p>Индекс поиска по умолчанию хранится в папке <strong>/protected/runtime/search</strong></p>
+<p>Далее перейти на страницу модуля <strong>http://site.ru/zendsearch/default/index</strong> и обновить индекс поиска.
+Индекс поиска по умолчанию хранится в папке <strong>/protected/runtime/search</strong></p>
 <p>После этого можно добавлять виджет формы поиска на страницы сайта:
 <pre><code class="php">
     $this-&gt;widget('application.modules.zendsearch.widgets.SearchBlockWidget');
 </code></pre></p>
+<div class="admonition important">
+<p class="admonition-title">Придем на помощь!</p>
+<p>Если Вам необходима интеграция полнотекстового поиска и/или фасетов (ElasticSearch или Sphinx) - мы можем <a href="http://yupe.ru/ecommerce/advanced">это сделать</a> для Вас!
+<a href="http://yupe.ru/contacts">Напишите нам!</a></p>
+</div>
               
             </div>
           </div>
@@ -329,7 +423,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../apc.options/" class="btn btn-neutral float-right" title="Оптимальные настройки APC"/>Далее <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../testing/" class="btn btn-neutral float-right" title="Тестирование"/>Далее <span class="icon icon-circle-arrow-right"></span></a>
       
       
         <a href="../events/" class="btn btn-neutral" title="Работа с событиями"><span class="icon icon-circle-arrow-left"></span> Назад</a>
@@ -363,7 +457,7 @@
         <span><a href="../events/" style="color: #fcfcfc;">&laquo; Назад</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../apc.options/" style="color: #fcfcfc">Далее &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../testing/" style="color: #fcfcfc">Далее &raquo;</a></span>
       
     </span>
 </div>

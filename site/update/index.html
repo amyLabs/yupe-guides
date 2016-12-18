@@ -66,7 +66,21 @@
         
             
     <li class="toctree-l1 ">
-        <a class="" href="..">Возможности</a>
+        <a class="" href="..">Начало</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../intro/">Знакомство с Yii</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../assistance.project/">Помощь проекту</a>
         
     </li>
 
@@ -78,24 +92,36 @@
     </li>
 
         
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../how/">Как сделать ?</a>
+        
+    </li>
+
+        
     </ul>
 <li>
           
             <li>
+    <ul class="subnav">
+    <li><span>Введение</span></li>
+
+        
+            
     <li class="toctree-l1 ">
-        <a class="" href="../intro/">Введение</a>
+        <a class="" href="../hosting/">Системные требования</a>
         
     </li>
-<li>
-          
-            <li>
+
+        
+            
     <li class="toctree-l1 ">
         <a class="" href="../install/">Установка</a>
         
     </li>
-<li>
-          
-            <li>
+
+        
+            
     <li class="toctree-l1 current">
         <a class="current" href="./">Обновление</a>
         
@@ -115,13 +141,31 @@
             </ul>
         
     </li>
+
+        
+    </ul>
 <li>
           
             <li>
+    <ul class="subnav">
+    <li><span>Модули</span></li>
+
+        
+            
     <li class="toctree-l1 ">
         <a class="" href="../modules/">Обзор модулей</a>
         
     </li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../module-create/">Создание модуля</a>
+        
+    </li>
+
+        
+    </ul>
 <li>
           
             <li>
@@ -132,15 +176,8 @@
 <li>
           
             <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../assistance.project/">Помощь проекту</a>
-        
-    </li>
-<li>
-          
-            <li>
     <ul class="subnav">
-    <li><span>Компоненты</span></li>
+    <li><span>Разработчику</span></li>
 
         
             
@@ -185,12 +222,11 @@
     </li>
 
         
-    </ul>
-<li>
-          
-            <li>
-    <ul class="subnav">
-    <li><span>Настройки</span></li>
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../testing/">Тестирование</a>
+        
+    </li>
 
         
             
@@ -231,13 +267,6 @@
     </ul>
 <li>
           
-            <li>
-    <li class="toctree-l1 ">
-        <a class="" href="../testing/">Тестирование</a>
-        
-    </li>
-<li>
-          
         </ul>
       </div>
       &nbsp;
@@ -259,6 +288,10 @@
     <li><a href="..">Документация</a> &raquo;</li>
     
       
+        
+          <li>Введение &raquo;</li>
+        
+      
     
     <li>Обновление</li>
     <li class="wy-breadcrumbs-aside">
@@ -275,13 +308,15 @@
             <div class="section">
               
                 <h1 id="_1">Обновление Юпи!</h1>
-<blockquote>
-<p>На данный момент (версия 0.9.8) доступно только ручное обновление системы. </p>
-</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Обратите внимание!</p>
+<p>На данный момент (версия 1.x) доступно только ручное обновление системы.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Важно!</p>
 <p>Следует отметить, что безопасное обновление возможно, только если вы не изменяли системные файлы или стандартные модули Юпи!</p>
-<blockquote>
-<p>Внимание! Перед обновлением системы не забудьте сделать резервные копии файлов и базы данных.</p>
-</blockquote>
+<p><strong>Внимание! Перед обновлением системы не забудьте сделать резервные копии файлов и базы данных</strong>.</p>
+</div>
 <h2 id="composer">Обновление при развертывании через Composer</h2>
 <p>Если вы использовали этот способ, то для обновления вам необходимо скопировать <a href="https://github.com/yupe/yupe">последнюю версию системы</a> на хостинг и выполнить команду</p>
 <pre><code>composer update
@@ -298,7 +333,7 @@
 </code></pre>
 
 <h2 id="_2">Обновление при развертывании из архива</h2>
-<p>Вам нужно просто <a href="http://yupe-project.ru/download">скачать</a> полный архив Юпи! со всеми установленными зависимостями и скопировать файлы на хостинг.</p>
+<p>Вам нужно просто <a href="http://yupe.ru/download">скачать</a> полный архив Юпи! со всеми установленными зависимостями и скопировать файлы на хостинг.</p>
 <h2 id="_3">Обновление конфигурации и миграций</h2>
 <p>Из командной строки обновление конфигураций и миграций выполняется командой</p>
 <pre><code>php protected/yiic yupe update
@@ -308,6 +343,11 @@
 <p>Для миграций <code>php protected/yiic yupe update</code> или <code>php protected/yiic migrate</code></p>
 <p>Также эту операцию можно выполнить через административную панель, кликая на специальные значки, которые появятся у модулей, требующих обновления.</p>
 <p><img alt="Обновление конфигураций и миграций" src="../img/yupe-update-1.png" /></p>
+<div class="admonition important">
+<p class="admonition-title">Придем на помощь!</p>
+<p>Мы как никто другой знаем свой продукт, обеспечим <a href="http://yupe.ru/service/support">лучшую поддержку и обновления</a>!
+<a href="http://yupe.ru/contacts">Напишите нам!</a></p>
+</div>
               
             </div>
           </div>
