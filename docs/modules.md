@@ -2,26 +2,26 @@
 
 Из коробки вы получаете уже рабочее приложение, со следующим функционалом:
 
-* [Регистрация](http://yupe.ru/registration), [аутентификация](http://yupe.ru/login), [восстановление пароля](http://yupe.ru/recovery), подтверждение email ([модуль user](https://github.com/yupe/yupe/tree/master/protected/modules/user)).
+* [Регистрация](https://yupe.ru/registration), [аутентификация](https://yupe.ru/login), [восстановление пароля](https://yupe.ru/recovery), подтверждение email ([модуль user](https://github.com/yupe/yupe/tree/master/protected/modules/user)).
 * Управление пользователями (блокировка, активация, редактирование и т.д.).
-* Модуль для <a href='http://yupe.ru/community' target='_blank'>ведения блогов и сообществ</a> ([как индивидуальных, так и коллективных](http://yupe.ru/blogs/yupe-mini-cms-yii)).
+* Модуль для <a href='https://yupe.ru/community' target='_blank'>ведения блогов и сообществ</a> ([как индивидуальных, так и коллективных](https://yupe.ru/blogs/yupe-mini-cms-yii)).
 * Создание и публикация новостей.
 * Создание и управление страницами сайта.
 * Создание и управление категориями сайта (разделами).
 * Создание и редактирование меню сайта.
-* Древовидные комментарии (можно комментировать любую сущность, [пример](http://yupe.ru/post/versiya-099-yupe-internet-magazin-free.html#comments)).
+* Древовидные комментарии (можно комментировать любую сущность, [пример](https://yupe.ru/post/versiya-099-yupe-internet-magazin-free.html#comments)).
 * Модуль простых справочников (хранение и управление справочной информацией).
-* Модуль для "Обратной связи" + [раздел FAQ](http://yupe.ru/faq).
+* Модуль для "Обратной связи" + [раздел FAQ](https://yupe.ru/faq).
 * Модуль для работы с блоками контента.
-* Удобная админка на Twitter Bootstrap  ([выглядит вот так](http://yupe.ru/albums)).
+* Удобная админка на Twitter Bootstrap  ([выглядит вот так](https://yupe.ru/albums)).
 * [Возможность генерировать CRUD в стиле Twitter Bootstrap](https://github.com/yupe/yupe/tree/master/protected/modules/yupe/extensions/yupe).
-* Создание и запуск полноценного [интернет-магазина](http://yupe.ru/ecommerce) ([каталог](http://yupe.ru/ecommerce), [заказы](http://yupe.ru/ecommerce/orders), [купоны](http://yupe.ru/ecommerce/coupons), [оплата](http://yupe.ru/ecommerce/payment), [доставка](http://yupe.ru/ecommerce/delivery))
+* Создание и запуск полноценного [интернет-магазина](https://yupe.ru/ecommerce) ([каталог](https://yupe.ru/ecommerce), [заказы](https://yupe.ru/ecommerce/orders), [купоны](https://yupe.ru/ecommerce/coupons), [оплата](https://yupe.ru/ecommerce/payment), [доставка](https://yupe.ru/ecommerce/delivery))
 
 
 # Обзор панели управления "Юпи!"
 Юпи! имеет модульную структуру, благодаря чему вы можете легко расширить систему под свои нужды.
 
-В стандартной поставке идет множество модулей, решающих большую часть повседневных задач. Если этого недостаточно, то дополнительные модули можно поискать на [Маркете](http://yupe.ru/marketplace) или заказать их [разработку у нас](http://amylabs.ru).
+В стандартной поставке идет множество модулей, решающих большую часть повседневных задач. Если этого недостаточно, то дополнительные модули можно поискать в [магазине](https://yupe.ru/store) или заказать их [разработку у нас](http://amylabs.ru).
 
 ## Системные модули
 Из стандартных, следует выделить модули **yupe** и **user**, без которых невозможна работа CMS Юпи!

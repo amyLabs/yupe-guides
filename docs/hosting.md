@@ -16,10 +16,10 @@
 
 
 !!! note "Обратите внимание!"
-    Если вы не можете выбрать подходящего поставщика услуг хостинга - обратитесь к <a href='http://yupe.ru/service/hosting' target='_blank'>нашим рекомендациям</a>
+    Если вы не можете выбрать подходящего поставщика услуг хостинга - обратитесь к <a href='https://yupe.ru/service/hosting' target='_blank'>нашим рекомендациям</a>
     или задайте вопрос на <a href='http://talk.yupe.ru/viewforum.php?f=80' target='_blank'>форуме</a>.
 
 
 !!! important "Придем на помощь!"
-    Наши специалисты могут помочь вам <a href='http://yupe.ru/store/services/install.html' target='_blank'>установить</a> платформу на выбранный хостинг
-    или произвести полную <a href='http://yupe.ru/store/services/server.html' target='_blank'>настройку сервера</a> - пожалуйста, обращайтесь!
+    Наши специалисты могут помочь вам <a href='https://yupe.ru/store/services/install.html' target='_blank'>установить</a> платформу на выбранный хостинг
+    или произвести полную <a href='https://yupe.ru/store/services/server.html' target='_blank'>настройку сервера</a> - пожалуйста, обращайтесь!

@@ -10,6 +10,6 @@
 И еще более [70 контрибьюторов на Github](https://github.com/yupe/yupe/graphs/contributors)!
 
 !!! note "Обратите внимание!"
-    Внеси свой вклад в Open Source ! **[Ждем только тебя !](http://yupe.ru/contacts)**
+    Внеси свой вклад в Open Source ! **[Ждем только тебя !](https://yupe.ru/contacts)**
 
 

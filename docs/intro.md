@@ -23,5 +23,5 @@
 
 
 !!! important "Придем на помощь!"
-    Мы предлагаем услугу [обучения разработчиков на Yii и "Юпи!"](http://yupe.ru/service/training), обращайтесь!
+    Мы предлагаем услугу [обучения разработчиков на Yii и "Юпи!"](https://yupe.ru/service/training), обращайтесь!
     Для новичков в ООП, рекомендуем [курс от Дмитрия Елисеева](http://www.elisdn.ru/oop-week?utm_medium=affiliate&utm_source=yupe) - [Практикум ООП](http://www.elisdn.ru/oop-week?utm_medium=affiliate&utm_source=yupe)!

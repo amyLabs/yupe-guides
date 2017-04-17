@@ -28,7 +28,7 @@ return array(
 );
 </code></pre>
 
-Подробнее про использование userspace для конфигурирования проекта читайте [здесь](http://yupe.ru/docs/yupe/userspace.config.html).
+Подробнее про использование userspace для конфигурирования проекта читайте [здесь](https://yupe.ru/docs/yupe/userspace.config.html).
 
 
 **При возникновении проблем - [напишите нам](http://amylabs.ru/contact)!**

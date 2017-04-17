@@ -116,5 +116,5 @@ return [
 </code></pre>
 
 !!! important "Придем на помощь!"
-    Если Вам необходима интеграция полнотекстового поиска и/или фасетов (ElasticSearch или Sphinx) - мы можем [это сделать](http://yupe.ru/ecommerce/advanced) для Вас!
-    [Напишите нам!](http://yupe.ru/contacts)
+    Если Вам необходима интеграция полнотекстового поиска и/или фасетов (ElasticSearch или Sphinx) - мы можем [это сделать](https://yupe.ru/ecommerce/advanced) для Вас!
+    [Напишите нам!](https://yupe.ru/contacts)

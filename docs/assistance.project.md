@@ -6,17 +6,17 @@
 
 - [Сообщить об ошибке на Github](https://github.com/yupe/yupe/issues/new) или на [нашем форуме](http://talk.yupe.ru/viewforum.php?id=2)
 - Мы пишем тесты на [Codeception](http://allframeworks.ru/codeception/) - пишите тесты для своих use-case и присылайте их нам
-- Всегда можно поддержать нас морально, [написав письмо](http://yupe.ru/contacts)
+- Всегда можно поддержать нас морально, [написав письмо](https://yupe.ru/contacts)
 - Помогайте пользователям на [форуме поддержки](http://talk.yupe.ru/)
-- Делайте проекты на "Юпи!" и становитесь [нашими партнерами](http://yupe.ru/partners)
+- Делайте проекты на "Юпи!" и становитесь [нашими партнерами](https://yupe.ru/partners)
 - [Рассказывайте](http://www.cmsmagazine.ru/catalogue/yupi-cms/works/) о проектах на "Юпи!"
 
 # Материально #
 
-- Создайте свой модуль для "Юпи!" и разместите его в ["Юпи! Market"](http://yupe.ru/store)
-- [Закажите](http://yupe.ru/contacts) у нас **разработку проекта** на Yii/Юпи!
-- [Переведите нам немного счастья](http://yupe.ru/make-world-better) +)
+- Создайте свой модуль для "Юпи!" и разместите его в ["Юпи! Market"](https://yupe.ru/store)
+- [Закажите](https://yupe.ru/contacts) у нас **разработку проекта** на Yii/Юпи!
+- [Переведите нам немного счастья](https://yupe.ru/make-world-better) +)
 
 
 !!! note "Обратите внимание!"
-    Мы верим в будущее Open Source разработки! Но нам необходима [ваша поддержка](http://yupe.ru/make-world-better)!
+    Мы верим в будущее Open Source разработки! Но нам необходима [ваша поддержка](https://yupe.ru/make-world-better)!
