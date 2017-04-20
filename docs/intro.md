@@ -6,20 +6,20 @@
 
 Для новичков в Yii:
 
-* [Что такое Yii](http://yiiframework.ru/doc/guide/ru/quickstart.what-is-yii)
-* [Установка](http://yiiframework.ru/doc/guide/ru/quickstart.installation)
-* [Создание первого приложения](http://yiiframework.ru/doc/guide/ru/quickstart.first-app)
-* [Модель-Представление-Контроллер (MVC)](http://yiiframework.ru/doc/guide/ru/basics.mvc)
-* [Лучшие практики MVC](http://yiiframework.ru/doc/guide/ru/basics.best-practices)
+* [Что такое Yii](http://www.yiiframework.com/doc/guide/1.1/ru/quickstart.what-is-yii)
+* [Установка](http://www.yiiframework.com/doc/guide/1.1/ru/quickstart.installation)
+* [Создание первого приложения](http://www.yiiframework.com/doc/guide/1.1/ru/quickstart.first-app)
+* [Модель-Представление-Контроллер (MVC)](http://www.yiiframework.com/doc/guide/1.1/ru/basics.mvc)
+* [Лучшие практики MVC](http://www.yiiframework.com/doc/guide/1.1/ru/basics.best-practices)
 
 !!! note "Обратите внимание!"
-    Обязательно прочитайте разделы, описывающие работу с [базой данных](http://yiiframework.ru/doc/guide/ru/database.overview) и работу с [формами](http://yiiframework.ru/doc/guide/ru/form.overview).
+    Обязательно прочитайте разделы, описывающие работу с [базой данных](http://www.yiiframework.com/doc/guide/1.1/ru/database.overview) и работу с [формами](http://www.yiiframework.com/doc/guide/1.1/ru/form.overview).
 
 Если вы собираетесь писать свои модули и дополнения для "Юпи!":
 
-* [Модули в Yii](http://yiiframework.ru/doc/guide/ru/basics.module)
-* [Темы оформления и скины](http://yiiframework.ru/doc/guide/ru/topics.theming)
-* [Улучшение производительности](http://yiiframework.ru/doc/guide/ru/topics.performance)
+* [Модули в Yii](http://www.yiiframework.com/doc/guide/1.1/ru/basics.module)
+* [Темы оформления и скины](http://www.yiiframework.com/doc/guide/1.1/ru/topics.theming)
+* [Улучшение производительности](http://www.yiiframework.com/doc/guide/1.1/ru/topics.performance)
 
 
 !!! important "Придем на помощь!"
