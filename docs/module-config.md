@@ -115,3 +115,11 @@ $ composer require dotzero/yii-amocrm
 * Перейти в "Сервисы" ---> AmoCrm и указать ключ, поддомен, email пользователя AmoCRM, нажать "Сохранить"
 * Выбрать из списка поля email и телефон
 * Поставить в крон команду  `php /<путь к сайту>/protected/yiic amocrm-export` 
+
+# Социализация (social)
+
+<h2>Настройка</h2>
+В настоящее время отсутствует возможность подключения ключей социальных сетей посредством веб-интерфейса административной панели. Для обеспечения входа через социальные сети необходимо скопировать файл `./protected/config/social.php` в папку `/protected/userspace/social.php` и внести в него изменения.
+
+###### Google:
+Необходимо указать 'сlient_id' и 'client_secret' - это идентификаторы OAuth2.0. Для их получения необходимо зайти в аккаунт Google, пройти по адресу https://console.developers.google.com/'. Далее активировать Google Cloud API и создать на вкладке "Учетные данные" учетную запись OAuth2.0. Также необходимо указать адрес response_URI, по умолчанию это http(https)://yourdomain.com/social/login/service/google
